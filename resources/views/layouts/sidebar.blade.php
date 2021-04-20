@@ -125,7 +125,7 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="bx bxs-eject"></i>
+                        <i class="fab fa-accusoft"></i>
                         <span key="t-ecommerce">Front Settings</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -157,7 +157,7 @@
                 @endif
     
                 @if(@$user->can('manage_peak_based_fare'))
-                <li class="{{ (Route::current()->uri() == 'admin/manage_fare') ? 'active' : ''  }}"><a href="{{ url('admin/manage_fare') }}"><i class="bx bxs-eject"></i><span>Manage Fare</span></a></li>
+                <li class="{{ (Route::current()->uri() == 'admin/manage_fare') ? 'active' : ''  }}"><a href="{{ url('admin/manage_fare') }}"><i class="fab fa-affiliatetheme"></i><span>Manage Fare</span></a></li>
                 @endif
     
 
@@ -198,7 +198,7 @@
                 @if($company_user || @$user->can('manage_driver_payments') || @$user->can('manage_company_payments'))
                 <li class="treeview {{ (Route::current()->uri() == 'admin/payout/overall' || Route::current()->uri() == 'admin/payout/company/overall' || Route::current()->uri() == 'company/payout/overall') ? 'active' : ''  }}">
                     <a href="#">
-                        <i class="fa fa-dollar" aria-hidden="true"></i> <span>Manage Payouts</span> <i class="fa fa-angle-left pull-right"></i>
+                        <i class="fab fa-airbnb"></i> <span>Manage Payouts</span> <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
                         @if($company_user || @$user->can('manage_driver_payments'))
@@ -211,7 +211,7 @@
                 @if($company_user ||  @$user->can('manage_statements'))
 			<li class="treeview {{ (Route::current()->uri() == $first_segment.'/statements/{type}') ? 'active' : ''  }}">
 				<a href="#">
-					<i class="fa fa-area-chart"></i> <span>Manage Statements</span> <i class="fa fa-angle-left pull-right"></i>
+					<i class="fab fa-artstation"></i><span>Manage Statements</span> <i class="fa fa-angle-left pull-right"></i>
 				</a>
 				<ul class="treeview-menu">
 					<li class="{{ (Route::current()->uri() == $first_segment.'/statements/overall') ? 'active' : ''  }}"><a href="{{ url($first_segment.'/statements/overall') }}"><i class="fa fa-circle-o"></i><span>Overall Ride Statments</span></a></li>
@@ -223,7 +223,7 @@
             @if(@$user->can('manage_wallet') || @$user->can('manage_promo_code'))
 			<li class="treeview {{ (Route::current()->uri() == 'admin/wallet/{user_type}' || Route::current()->uri() == 'admin/promo_code') ? 'active' : ''  }}">
 				<a href="#">
-					<i class="fa fa-google-wallet"></i> <span>Manage Wallet & Promo</span> <i class="fa fa-angle-left pull-right"></i>
+                    <i class="fas fa-award"></i> <span>Manage Wallet & Promo</span> <i class="fa fa-angle-left pull-right"></i>
 				</a>
 				<ul class="treeview-menu">
 					@if($company_user || @$user->can('manage_wallet'))
@@ -278,16 +278,16 @@
 			@endif
 
             @if(@$user->can('manage_api_credentials'))
-			<li class="{{ (Route::current()->uri() == 'admin/api_credentials') ? 'active' : ''  }}"><a href="{{ url('admin/api_credentials') }}"><i class="fa fa-gear"></i><span>Api Credentials</span></a></li>
+			<li class="{{ (Route::current()->uri() == 'admin/api_credentials') ? 'active' : ''  }}"><a href="{{ url('admin/api_credentials') }}"><i class="fas fa-bahai"></i><span>Api Credentials</span></a></li>
 			@endif
 			@if(@$user->can('manage_payment_gateway'))
-			<li class="{{ (Route::current()->uri() == 'admin/payment_gateway') ? 'active' : ''  }}"><a href="{{ url('admin/payment_gateway') }}"><i class="fa fa-paypal"></i><span>Payment Gateway</span></a></li>
+			<li class="{{ (Route::current()->uri() == 'admin/payment_gateway') ? 'active' : ''  }}"><a href="{{ url('admin/payment_gateway') }}"><i class="fab fa-bandcamp"></i><span>Payment Gateway</span></a></li>
 			@endif
 
             @if(@$user->can('manage_additional_tax') || @$user->can('manage_fees'))
             <li class="treeview {{ (Route::current()->uri() == 'admin/additional_tax' || Route::current()->uri() == 'admin/fees') ? 'active' : ''  }}">
                 <a href="#">
-                    <i class="fa fa-dollar"></i>
+                    <i class="fas fa-band-aid"></i>
                     <span>Manage Fees</span><i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
@@ -310,29 +310,29 @@
             @endif
 
             @if(@$user->can('manage_referral_settings'))
-			<li class="{{ (Route::current()->uri() == 'admin/referral_settings') ? 'active' : ''  }}"><a href="{{ url('admin/referral_settings') }}"><i class="fa fa-users"></i><span>Manage Referral Settings</span></a></li>
+			<li class="{{ (Route::current()->uri() == 'admin/referral_settings') ? 'active' : ''  }}"><a href="{{ url('admin/referral_settings') }}"><i class="fab fa-battle-net"></i><span>Manage Referral Settings</span></a></li>
 			@endif
 			@if(@$user->can('manage_metas'))
-			<li class="{{ (Route::current()->uri() == 'admin/metas') ? 'active' : ''  }}"><a href="{{ url('admin/metas') }}"><i class="fa fa-bar-chart"></i><span>Manage Metas</span></a></li>
+			<li class="{{ (Route::current()->uri() == 'admin/metas') ? 'active' : ''  }}"><a href="{{ url('admin/metas') }}"><i class="fas fa-biohazard"></i><span>Manage Metas</span></a></li>
 			@endif
 			@if(@$user->can('manage_country'))
 			<li class="{{ (Route::current()->uri() == 'admin/country') ? 'active' : ''  }}"><a href="{{ url('admin/country') }}"><i class="fa fa-globe"></i><span>Manage Country</span></a></li>
 			@endif
 			@if(@$user->can('manage_currency'))
-			<li class="{{ (Route::current()->uri() == 'admin/currency') ? 'active' : ''  }}"><a href="{{ url('admin/currency') }}"><i class="fa fa-eur"></i><span>Manage Currency</span></a></li>
+			<li class="{{ (Route::current()->uri() == 'admin/currency') ? 'active' : ''  }}"><a href="{{ url('admin/currency') }}"><i class="fab fa-blackberry"></i><span>Manage Currency</span></a></li>
 			@endif
 			@if(@$user->can('manage_language'))
 			<li class="{{ (Route::current()->uri() == 'admin/language') ? 'active' : ''  }}"><a href="{{ url('admin/language') }}"><i class="fa fa-language"></i><span>Manage Language</span></a></li>
 			@endif
 			@if(@$user->can('manage_static_pages'))
-			<li class="{{ (Route::current()->uri() == 'admin/pages') ? 'active' : ''  }}"><a href="{{ url('admin/pages') }}"><i class="fa fa-newspaper-o"></i><span>Manage Static Pages</span></a></li>
+			<li class="{{ (Route::current()->uri() == 'admin/pages') ? 'active' : ''  }}"><a href="{{ url('admin/pages') }}"><i class="fab fa-bity"></i><span>Manage Static Pages</span></a></li>
 			@endif
 
 
             @if(@$user->can('manage_help'))
 			<li class="treeview {{ (Route::current()->uri() == 'admin/help' || Route::current()->uri() == 'admin/help_category' || Route::current()->uri() == 'admin/help_subcategory') ? 'active' : ''  }}">
 				<a href="#">
-					<i class="fa fa-support"></i> <span>Manage Help</span> <i class="fa fa-angle-left pull-right"></i>
+					<i class="fas fa-brain"></i> <span>Manage Help</span> <i class="fa fa-angle-left pull-right"></i>
 				</a>
 				<ul class="treeview-menu">
 					<li class="{{ (Route::current()->uri() == 'admin/help') ? 'active' : ''  }}"><a href="{{ url('admin/help') }}"><i class="fa fa-circle-o"></i><span>Help</span></a></li>
