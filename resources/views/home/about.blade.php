@@ -3,7 +3,7 @@
 
 	<!-- Heading -->
     <div class="about-p-heading">
-        <h3 class="fw-bold">Drive when you want <br> Make what you need</h3>
+        <h3 class="fw-bold">Zcon is based on several key principles:</h3>
     </div>
     <!-- /Heading -->
     
@@ -83,7 +83,7 @@
     <!-- Get Started -->
     <div class="about-started py-5 text-center">
         <h3 class="lh-base pb-2">We will be launching for all New Yorkers <br> in early 2021.</h3>
-        <a href="#" class="btn btn-danger">Get Started</a>
+        <a href="#" class="btn btn-primary">Get Started</a>
     </div>
     <!-- /Get Started -->
     

@@ -22,29 +22,97 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">
-                    <img src="{{asset('front_assets/img/logo.png')}}" alt="">
-                </a>
-                <a href="#" class="nav-toggler">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
-                <div class="navigation-content">
-                    <ul class="navigation">
-                    	
-                    	<li><a href="#">Login</a></li>
-                    	<li><a href="#">Register</a></li>
-<!--                         <li><a href="#">RIDE</a></li>
-                        <li><a href="#">DRIVE</a></li>
-                        
-                        <li><a href="#">HELP</a></li> -->
-                    </ul>
-                    <a href="#" class="btn btn-primary">Become a Driver</a>
+    
+<header class="header sticky-wrapper" id="sticker">
+    <div class="container">
+        <nav class="header-content">
+            <a href="/" class="logo">
+                <img src="{{asset('front_assets/img/logo.png')}}" alt="">
+            </a>
+            <a href="#" class="nav-toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <div class="navigation-content">
+                <ul class="navigation">
+
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/contact">Contact</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                    <!--                         <li><a href="#">RIDE</a></li>
+                                            <li><a href="#">DRIVE</a></li>
+
+                                            <li><a href="#">HELP</a></li> -->
+                </ul>
+                <a href="#" class="btn btn-primary">Become a Driver</a>
+                <div class="side-menu">
+                    <i class="fas fa-bars"></i>
                 </div>
-            </div>
+<!-- <div id="sidenav" class="sidenav d-none">
+    <a  class="closebtn" >&times;</a>
+    <a href="/about">About</a>
+    <a href="/pricing">Pricing</a>
+    
+    <a href="/admin/login">Login</a>
+    <a href="/admin/login">Register</a>
+	<a href="/contact">Contact Us</a>
+</div> -->
+
+<!-- resource/views/laouts/pertials/header.blade.php -->
+<div id="sidenav" class="sidenav d-none">
+    <div class="sideber-menu-item">
+        <div class="siderber-logo mb-50">
+        <img src="{{asset('front_assets/img/logo.png')}}">
         </div>
-    </header>
+        <div  class="closebtn" >&times;</div>
+    
+        <a href="/about">About</a>
+    	<a href="/pricing">Pricing</a>
+   		<a href="/admin/login">Login</a>
+    	<a href="/admin/login">Register</a>
+    	<a href="/contact">Contact Us</a>
+    </div>
+
+
+    <div class="flex mt-30 sideber-socalicon">
+        <ul class="list-unstyled social">
+            <li>
+                <a href="#">
+                    <i class="fa fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-youtube-play"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-pinterest"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>            
+            
+            
+            
+
+            </div>
+        </nav>
+    </div>
+</header>

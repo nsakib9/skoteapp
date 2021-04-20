@@ -5,9 +5,12 @@
     <section class="1st-section my-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 co-sm-12">
+                <div class="col-md-6 co-sm-12 mt-50">
                     <h2 class="">Our approach to pricing</h2>
-                    <p class="my-3 lh-lg">Your business is only billed our standard rates for rides and meal delivery. Are you a large business looking for custom solutions? <a href="#">Contact us</a>.</p>
+                    <p class="my-3 lh-lg">We charge competitive pricing to the other Rideshare companies 
+                    but we want to make sure you get better value for your money. We have special pricing for wedding and events.
+                    We also have special pricing for our business customers
+                    <a href="#">Contact us</a>.</p>
                     <a href="#" class="btn btn-dark rounded-0 py-3">Get Strated for Free</a>
                 </div>
             </div>
@@ -53,7 +56,7 @@
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="flush-headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                What expense management systems does Uber for Business integrate with? 
+                                What cost control structures does Zcon for Business combine with? 
                             </button>
                           </h2>
                           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -64,7 +67,7 @@
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="flush-headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                What billing options are available? 
+                                What billing alternatives are available?
                             </button>
                           </h2>
                           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
@@ -75,7 +78,7 @@
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="flush-headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                When do I get charged for a ride or meal?
+                               When do I get charged for a journey or meal?
                             </button>
                           </h2>
                           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
@@ -86,7 +89,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingFour">
                               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                                How do I get a price estimate in the app?
+                               How do I get a fee estimate withinside the app?
                               </button>
                             </h2>
                             <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
@@ -97,7 +100,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingFive">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                                    How are prices estimated? 
+                                    How are charges estimated?
                                 </button>
                             </h2>
                             <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
@@ -116,8 +119,8 @@
     <section class="4th-section">
         <div class="container">
             <div class="about-started py-5 text-center">
-                <h3 class="lh-base pb-2">Your business is going places. We’re here to help.</h3>
-                <a href="#" class="btn btn-dark">Get Started for Free</a>
+                <h3 class="lh-base pb-2">We want to ensure the best value for your money.</h3>
+                <a href="#" class="btn btn-primary">Get Started for Free</a>
             </div>
         </div>
     </section>

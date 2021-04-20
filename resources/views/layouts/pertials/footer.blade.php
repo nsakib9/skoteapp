@@ -1,29 +1,27 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-md-4 mb-xs-30 mb-sm-30">
+            <div class="col-sm-6 col-md-3 mb-xs-30 mb-sm-30">
                 <div class="footer-block">
-                    <h5 class="text-bold text-uppercase">Get Started</h5>
-                    <ul class="list-unstyled column-2">
-                        <li><a href="#">Ride</a></li>
-                        <li><a href="#">Drive</a></li>
-                        <li><a href="#">Safty</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Our Vision</a></li>
-                        <li><a href="#">how It Works</a></li>
-                        <li><a href="#">About us</a></li>
+                    <h5 class="text-bold text-uppercase">Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/admin/login">Login</a></li>
+                        <li><a href="/admin/login">Register</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-2 mb-xs-30 mb-sm-30">
+            <div class="col-sm-6 col-md-3 mb-xs-30 mb-sm-30">
                 <div class="footer-block">
                     <h5 class="text-bold text-uppercase">Need Help?</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="/contact">Contact</a></li>
                         <li><a href="#">FAQs</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Use</a></li>
-                    	<li><a href="#">LET’S KEEP IN TOUCH</a></li>
+                        <li><a href="#">LET’S KEEP IN TOUCH</a></li>
                     </ul>
                 </div>
             </div>
@@ -33,8 +31,8 @@
                         <h5 class="text-bold text-uppercase">LET’S KEEP IN TOUCH</h5>
                         <div class="language-select dropdown">
                             <button class="dropdown-toggle" type="button" data-toggle="dropdown"
-                                aria-expanded="true">
-                                <img src="{{asset('front_assets/img/flag.png')}}" alt="" class="flag">
+                                    aria-expanded="true">
+                                <img src="http://3.88.170.115:82/front_assets/img/flag.png" alt="" class="flag">
                                 <span>En</span>
                                 <i class="fa fa-chevron-down"></i>
                             </button>
@@ -47,7 +45,7 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="{{asset('front_assets/img/flag.pn')}}g" alt="" class="flag">
+                                        <img src="{{asset('front_assets/img/flag.png')}}" alt="" class="flag">
                                         <span>Sp</span>
                                     </a>
                                 </li>
@@ -87,7 +85,7 @@
                             </li>
                         </ul>
                         <div class="stores">
-                            <a href="#"><img src="{{asset('front_assets/img/app-store.png')}}" alt=""></a>
+                             <a href="#"><img src="{{asset('front_assets/img/app-store.png')}}" alt=""></a>
                             <a href="#"><img src="{{asset('front_assets/img/play-store.png')}}" alt=""></a>
                         </div>
                     </div>
@@ -95,16 +93,40 @@
             </div>
         </div>
     </div>
-	<div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>All Rights Reserved Zcon Services, LLC, 2021 | Powered by <a href="#">Ameltek</a>, <a href="#">Inc</a>.</p>
-                    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>All Rights Reserved Zcon Services, LLC, 2021 | Powered by <a href="#">Ameltek</a>, <a href="#">Inc</a>.</p>
                 </div>
             </div>
+        </div>
     </div>
 </footer>
+<script>
+    window.onscroll = function() {myFunction()};
+
+    var sticker = document.getElementById("sticker");
+	var sticker_body = document.querySelector("body");
+    var sticky = sticker.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= 10) {
+		
+            sticker.classList.add("sticky");
+        	sticker_body.classList.add("stickysc");
+        } else {
+        
+            sticker.classList.remove("sticky");
+        // $('#sticker').fadeIn(1000);
+        	sticker_body.classList.remove("stickysc");
+        }
+    };
+           
+
+
+</script>
+<script src="js/function.js" type="text/javascript"></script>
 <script src="https://kit.fontawesome.com/c860a299a7.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
@@ -113,3 +135,4 @@
 </body>
 
 </html>
+   

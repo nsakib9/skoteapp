@@ -1,5 +1,6 @@
-@extends('layouts.main')
-@section('main.content')
+@extends('template')
+
+@section('main')
 
 <main id="site-content" role="main" ng-controller="help">
   <div id="help-search-container-banner-id" class="media-photo media-photo-block help-search-container help-search-container-banner">
