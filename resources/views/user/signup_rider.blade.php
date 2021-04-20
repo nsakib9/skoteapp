@@ -1,6 +1,5 @@
-@extends('templatesign')
-
-@section('main')
+@extends('layouts.main')
+@section('main.content')
 <div id="app-wrapper" class="signup-riders" ng-controller="facebook_account_kit">
    @include('user.otp_popup')
   <header class="funnel" style="background:url('images/blue-global.png') center center repeat;" >

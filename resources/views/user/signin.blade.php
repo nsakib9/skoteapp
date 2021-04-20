@@ -1,6 +1,5 @@
-@extends('templatesign')
-
-@section('main')
+@extends('layouts.main')
+@section('main.content')
 <div class="signin-selector clearfix">
 <div class="signin-container">
 <div class="signin-center-content">

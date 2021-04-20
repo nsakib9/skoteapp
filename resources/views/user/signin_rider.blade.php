@@ -1,6 +1,6 @@
 <link rel="shortcut icon" href="{{ FAVICON_URL }}">
-@extends('templatesign')
-@section('main')
+@extends('layouts.main')
+@section('main.content')
 <div id="app-wrapper" class="sigin-riders" ng-controller="user">
    <header class="funnel">
       <div class="bit bit--logo text--center">

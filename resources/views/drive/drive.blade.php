@@ -1,6 +1,5 @@
-@extends('templatesign')
-
-@section('main')
+@extends('layouts.main')
+@section('main.content')
 <div class="container-fluid fixed-header" style="background:rgb(248, 248, 249);z-index:99;">
 <ul class="sub-header">
 <li><a href="{{ url('requirements') }}">{{trans('messages.header.require')}}</a></li>
