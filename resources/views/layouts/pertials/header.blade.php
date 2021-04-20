@@ -37,16 +37,16 @@
             <div class="navigation-content">
                 <ul class="navigation">
 
-                <li><a href="/">Home</a></li>
+                {{-- <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/pricing">Pricing</a></li>
                 <li><a href="/contact">Contact</a></li>
                     <li><a href="#">Login</a></li>
-                    <li><a href="#">Register</a></li>
-                    <!--                         <li><a href="#">RIDE</a></li>
+                    <li><a href="#">Register</a></li> --}}
+                                           <li><a href="#">RIDE</a></li>
                                             <li><a href="#">DRIVE</a></li>
 
-                                            <li><a href="#">HELP</a></li> -->
+                                            {{-- <li><a href="#">HELP</a></li>  --}}
                 </ul>
                 <a href="#" class="btn btn-primary">Become a Driver</a>
                 <div class="side-menu">
