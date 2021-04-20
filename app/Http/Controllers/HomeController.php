@@ -52,6 +52,14 @@ class HomeController extends Controller
     {
       	return view('home.model');
     }
+    public function signin()
+    {
+      	return view('home.signin');
+    }
+    public function signup()
+    {
+      	return view('home.signup');
+    }
   
     /**
      * View Static Pages

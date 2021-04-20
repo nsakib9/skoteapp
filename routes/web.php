@@ -22,6 +22,8 @@ Route::group(['middleware' =>'locale'], function () {
 	Route::get('/about', 'HomeController@about');
 	Route::get('/contact', 'HomeController@contact');
 	Route::get('/model', 'HomeController@model');
+	Route::get('/front/signin', 'HomeController@signin');
+	Route::get('/front/signup', 'HomeController@signup');
 
 });
 
