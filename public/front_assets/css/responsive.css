@@ -1,0 +1,143 @@
+@media(max-width:1199px) {
+
+    .logo img {
+        max-width: 100px;
+    }
+
+    .navigation {
+        gap: 10px;
+    }
+
+    .header .btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media(max-width:991px) {
+    .nav-toggler {
+        display: block;
+    }
+
+    .navigation-content {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 999;
+        flex-direction: column;
+        background: var(--white);
+        padding: 20px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        transform: scaleY(0);
+        transition: 0.2s;
+        transform-origin: top;
+    }
+
+    .navigation-content.open {
+        opacity: 1;
+        visibility: visible;
+        transform: scaleY(1);
+    }
+
+    .navigation {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .hero-section {
+        padding: 50px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+        margin-top: 0;
+    }
+
+    .hero-content h2 {
+        font-size: 30px;
+    }
+
+    .hero-content .buttons {
+        flex-direction: column;
+        gap: 5px;
+        max-width: 100%;
+    }
+
+    .hero-content .buttons .btn {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:767px) {
+
+    .logo img {
+        max-width: 80px;
+    }
+
+    .hero-section {
+        padding: 50px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+        margin-top: 0;
+    }
+
+    .hero-content h2 {
+        font-size: 30px;
+    }
+
+    .hero-content .buttons {
+        flex-direction: column;
+        gap: 5px;
+        max-width: 100%;
+    }
+
+    .hero-content .buttons .btn {
+        font-size: 16px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media(max-width:575.98px){
+   /* team css start */
+   .sec-header h1 {
+        font-size: 28px;
+    }
+    
+}
+
+
+
+/* Medium devices (Tablates, 768px and up) */
+@media(min-width:768px) and (max-width:991.98px){
+    
+}
+
+
+@media(min-width:992px) and (max-width:1199.98px){
+    
+}
+
+
+@media(min-width:1200px) and (max-width:1399.98px){
+    
+}
+
+
+@media(min-width:1400px) and (max-width:1599.98px){
+    
+}
+
+@media(min-width:1600px) and (max-width:1799.98px){
+    
+}
+
+
+@media(min-width:1800px){
+    
+}
