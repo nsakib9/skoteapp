@@ -22,6 +22,9 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
+.env
+
+
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/config.yml
