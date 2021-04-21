@@ -10,6 +10,10 @@
     @endif
 </div> -->
 @extends('layouts.main')
+
+
+
+
 @section('main.content')
 <div class="ux-content text-center signin" ng-controller="user">
     {{-- <a href="{{ url('/') }}">
@@ -62,7 +66,7 @@
       </div>
    </div>
 </div>
-</main>
+
 <style>
    .logo-link
    {
@@ -74,4 +78,4 @@
    }
 
 </style>
-@stop
+@endsection

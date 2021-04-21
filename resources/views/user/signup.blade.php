@@ -1,33 +1,35 @@
 @extends('layouts.main')
 @section('main.content')
-<div class="signin-selector clearfix">
-<div class="signin-container">
-<div class="signin-center-content">
-<div class="desk-wrapper clearfix">
-  <h1 class="signin-maincontent">{{trans('messages.home.siginup')}}</h1>
-@if(Auth::user()==null)
-  <div class="col-md-6 p-0">
-  <h4 class="driver-sub-head">{{trans('messages.profile.driver')}}</h4>
-  <p class="driver-sub-cont">{{trans('messages.profile.track_every')}}</p>
-  <a href="{{ url('signup_driver') }}" class="btn btn-for-driver">
-  <div class="block-context soft-small--right">{{trans('messages.profile.driver_signup' )}}</div>
- <i class="fa fa-long-arrow-right icon icon_right-arrow-thin"></i>
-  </a>
+
+{{-- use translations {{trans('messages.profile.driver_signup' )}} --}}
+<section class="singup-section">
+  <div class="container singup-section-background">
+      <div class="singup-title">
+          <h1>Sign Up</h1>
+      </div>
+      @if(Auth::user()==null)
+      <div class="singup-content row">
+
+          <div class="col-md-6 sinup-driver">
+              <h2>Driver</h2>
+              <p>Find everything you need to track your success on the road.</p>
+              <a href="{{ url('signup_driver') }}" class="btn btn-for-driver">
+              <button class="btn sing-in-button" >Driver sign Up <i class="fa fa-long-arrow-right icon icon_right-arrow-thin"></i></button>
+              </a>
+         </div>
+
+          <div class="col-md-6 sinup-rider">
+              <h2>Rider</h2>
+              <p>Find everything you need to track your success on the road.</p>
+              <a href="{{ url('signup_rider') }}" class="btn btn-for-rider">
+              <button class="btn sing-in-button" >Rider sign Up <i class="fa fa-long-arrow-right icon icon_right-arrow-thin"></i></button>
+              </a>
+          </div>
+      </div>
+      @endif
   </div>
-   <div class="col-md-6 p-0">
-  <h4 class="driver-sub-head">{{trans('messages.profile.rider')}}</h4>
-  <p class="driver-sub-cont">{{trans('messages.profile.trip_history')}}</p>
-  <a href="{{ url('signup_rider') }}" class="btn btn-for-rider">
-  <div class="block-context soft-small--right">{{trans('messages.profile.rider_signup')}}</div>
- <i class="fa fa-long-arrow-right icon icon_right-arrow-thin"></i>
-  </a>
-  </div>
-@endif
-</div>
+</section>
   
-</div>
-</div>
-</div>
 
 </main>
 @stop

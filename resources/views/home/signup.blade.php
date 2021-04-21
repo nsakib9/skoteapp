@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('main.content')
-
+{{-- no need this page  --}}
 <section class="singup-section">
     <div class="container singup-section-background">
         <div class="singup-title">

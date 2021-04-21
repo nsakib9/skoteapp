@@ -52,18 +52,10 @@
                 <div class="side-menu">
                     <i class="fas fa-bars"></i>
                 </div>
-<!-- <div id="sidenav" class="sidenav d-none">
-    <a  class="closebtn" >&times;</a>
-    <a href="/about">About</a>
-    <a href="/pricing">Pricing</a>
-    
-    <a href="/admin/login">Login</a>
-    <a href="/admin/login">Register</a>
-	<a href="/contact">Contact Us</a>
-</div> -->
+
 
 <!-- resource/views/laouts/pertials/header.blade.php -->
-<div id="sidenav" class="sidenav d-none">
+{{-- <div id="sidenav" class="sidenav d-none">
     <div class="sideber-menu-item">
         <div class="siderber-logo mb-50">
         <img src="{{asset('front_assets/img/logo.png')}}">
@@ -75,6 +67,53 @@
    		<a href="/admin/login">Login</a>
     	<a href="/admin/login">Register</a>
     	<a href="/contact">Contact Us</a>
+    </div>
+    <div class="flex mt-30 sideber-socalicon">
+        <ul class="list-unstyled social">
+            <li>
+                <a href="#">
+                    <i class="fa fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-youtube-play"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-pinterest"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>   --}}
+
+
+
+<div id="sidenav" class="sidenav d-none">
+    <div class="sideber-menu-item">
+        <a href="/" class="siderber-logo mb-50">
+            <img src="{{asset('front_assets/img/logo.png')}}">
+        </a>
+        <a  class="closebtn" >&times;</a>
+        <div class="sideber-menu-item-hover">
+            <a href="/about">About</a>
+            <a href="/pricing">Pricing</a>
+            <a href="/admin/login">Login</a>
+            <a href="/admin/login">Register</a>
+            <a href="/contact">Contact Us</a>
+        </div>
     </div>
 
 
@@ -107,7 +146,7 @@
             </li>
         </ul>
     </div>
-</div>            
+</div>
             
             
             

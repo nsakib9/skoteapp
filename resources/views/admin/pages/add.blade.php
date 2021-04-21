@@ -21,7 +21,7 @@
     <section class="content">
       <div class="row">
         <!-- right column -->
-        <div class="col-md-8 col-sm-offset-2">
+        <div class="col-md-12 col-sm-offset-0">
           <!-- Horizontal Form -->
           <div class="box box-info">
             <div class="box-header with-border">

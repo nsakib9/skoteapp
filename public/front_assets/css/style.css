@@ -145,10 +145,10 @@ button:focus:not(:focus-visible), .accordion-button:not(.collapsed) {
 }
 
 .navigation-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex: 1;
+	display: flex;
+	align-items: baseline;
+	justify-content: end;
+	flex: 1;
 }
 
 .navigation {
@@ -156,7 +156,7 @@ button:focus:not(:focus-visible), .accordion-button:not(.collapsed) {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 0;
     list-style: none;
 }
@@ -623,7 +623,7 @@ background-attachment: fixed;
 .sideber-menu-item {
     height: calc(100vh - 100px);
 }
-.sideber-menu-item a:hover {
+.sideber-menu-item-hover a:hover {
     background: #370a53;
     color: #ffff;
 }
@@ -666,7 +666,7 @@ background-attachment: fixed;
     font-weight: 900 !important;
 }
 
-buttonb.btn.sing-in-button {
+button.btn.sing-in-button {
     padding-bottom: 8px !important;
     padding-top: 8px !important;
     padding-right: 30px;
@@ -688,4 +688,250 @@ buttonb.btn.sing-in-button {
     position: absolute !important;
     top: 0 !important;
     width: 40px !important;
+}
+
+
+/*signup-rider*/
+.signup-rider{
+    margin: 85px 0 80px 0;
+    padding: 60px 0px;
+}
+.signup-wrapper {
+    margin: 0 auto;
+    width: 600px;
+}
+.stage {
+  /*  margin: 100px auto 40px;*/
+}
+.stage .form-wrapper {
+    margin: 0 auto;
+    max-width: 440px;
+}
+.field__input:hover, .field__input:focus {
+    box-shadow: inset 0 0 10px 0 rgb(85 85 85 / 10%);
+    outline: 0;
+}
+.field__input {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e4;
+    color: #333;
+    font-size: 14px;
+    height: 52px;
+    padding: 0 18px;
+    transition: all 0.2s ease-out 0s;
+    width: 100%;
+}
+.stage .inside-ion {
+    color: #c6c6c6;
+    position: absolute;
+    right: 14px;
+    top: 18px;
+}
+.text-input, .icon-input input, .select select {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #e5e5e4;
+    border-radius: 0;
+    color: #000000;
+    font-size: 14px;
+    margin-bottom: 24px;
+    outline: medium none;
+    padding: 8px 18px;
+    width: 100%;
+}
+
+.select.select--xl {
+    background: #f8f8f9 none repeat scroll 0 0;
+    margin-bottom: 12px;
+    position: absolute;
+}
+.float label {
+    color: #717171;
+    font-size: 11px;
+    left: 18px;
+    opacity: 0;
+    position: absolute;
+    top: 6px;
+    transition: all 0.2s ease 0s;
+    z-index: 1;
+    font-weight: 500;
+}
+#mobile_country {
+    border-right: 0 none !important;
+    margin-bottom: 0;
+    padding-right: 6px !important;
+}
+#select-title-stage {
+    font-size: 14px;
+    font-weight: 500;
+    left: 0;
+    opacity: 0.4;
+    padding: 14px 12px;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s ease 0s;
+    z-index: 1;
+}
+.two-char .select.select--xl select {
+    text-indent: -1000px;
+}
+.select.select--xl select {
+    min-height: 50px;
+}
+.select.select--xl select {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    font-size: 14px;
+    min-height: 52px;
+    padding: 0 12px;
+    position: relative;
+    z-index: 1;
+}
+.field {
+    position: relative;
+    right: 0;
+}
+.field--not-empty .field__label {
+    opacity: 1;
+    transform: none;
+}
+.first-name-field{
+    position: absolute !important;
+}
+.field__label {
+    color: #919293 !important;
+    box-sizing: border-box;
+    display: block;
+    font-size: .8125em;
+    line-height: 1;
+    opacity: 0;
+    overflow: hidden;
+    padding: .5em 1em;
+    pointer-events: none;
+    position: absolute;
+    text-overflow: ellipsis;
+    top: 0;
+    text-align: left;
+    transform: translateY(3px);
+    transition: all .2s ease-out;
+    user-select: none;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 1;
+}
+.btn.btn--primary:hover {
+    color: #fff !important;
+}
+.btn.btn--primary:hover {
+    background-color: #330C53 !important;
+    border-color: #330C53 !important;
+}
+.stage .signup-btn {
+    color: #ffffff;
+    background: #330C53 none repeat scroll 0 0 !important;
+    border-color: #330C53 !important;
+    font-weight: 600;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.float--left {
+    float: left!important;
+}
+.btn--arrow .icon_right-arrow-thin {
+    float: right;
+}
+.legal {
+    font-size: 10.5px;
+    letter-spacing: 0.02em;
+    line-height: 18px;
+}
+.legal > a {
+    color: #11939a;
+}
+.signup-top-text {
+    margin-top: 20px;
+    display: inline-block;
+    width: 100%;
+}
+.signup-top-text h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 900 !important;
+}
+.mobile-container.two-char .number {
+    width: 85%;
+    position: relative;
+    right: -65px;
+}
+.mobile-container.two-char #country {
+    float: left;
+    position: relative;
+    width: 15%;
+}
+.filed-half {
+    padding: 0;
+}
+
+.layout {
+    list-style: outside none none;
+    margin-left: 0;
+    padding: 0;
+}
+
+#sign-up-link-only a {
+    color: #11939a;
+    text-decoration: none;
+}
+.small {
+    font-size: 11px;
+    font-size: 12px;
+    line-height: 2.18182;
+}
+.input-group {
+    position: relative;
+    border-collapse: separate;
+}
+.filed-half {
+    padding: 0;
+}
+.field {
+    position: relative;
+}
+.push-small--bottom, .push-small--ends {
+    margin-bottom: 24px!important;
+}
+#referral_code{
+    color: #000000;
+    height: 50px;
+}
+
+.error-border{
+    background: #ffffff none repeat scroll 0 0 !important;
+    border: 1px solid red !important;
+    border-radius: 0 !important;
+    color: #000000 !important;
+    font-size: 14px !important;
+    margin-bottom: 24px !important;
+    outline: medium none !important;
+    padding: 8px 18px !important;
+    width: 100% !important;
+    border-left: 1px solid red !important;
+    border-top: 1px solid red !important;
+}
+.text-input, .icon-input input, .select select {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #e5e5e4;
+    border-radius: 0;
+    color: #000000;
+    font-size: 14px;
+    margin-bottom: 24px;
+    outline: medium none;
+    padding: 8px 18px;
+    width: 100%;
+}
+.signup-top-text img {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.signup-top-text {
+    text-align: center;
 }
