@@ -10,6 +10,15 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ URL::asset('assets/images/favicon.png') }}">
     @include('layouts.head-css')
+
+
+    <!-- CSRF Token file manager -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{-- font awesome  --}}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    {{-- file manager styles --}}
+    <link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
+
 </head>
 
 @section('body')
@@ -44,6 +53,10 @@
 
     <!-- JAVASCRIPT -->
     @include('layouts.vendor-scripts')
+
+    
+{{-- file manager js --}}
+<script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
 </body>
 
 </html>

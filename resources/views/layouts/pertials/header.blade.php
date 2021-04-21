@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{asset('front_assets/css/responsive.css')}}">
 	<link rel="stylesheet" href="{{asset('front_assets/css/font-awesome.min.css')}}">
   
+    
 
 	@stack('header.css')
 

@@ -27,7 +27,7 @@ Route::group(['prefix' => (LOGIN_USER_TYPE=='company')?'company':'admin', 'middl
 	}
 
 	// Front pages routes
-
+	Route::view('files', 'home.files');
 	// Manage Banner
 	Route::get('banner', 'BannerController@index')->middleware('admin_can:view_rider');
 	Route::match(array('GET', 'POST'), 'add_banner', 'BannerController@add')->middleware('admin_can:create_rider');

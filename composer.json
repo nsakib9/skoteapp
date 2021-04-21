@@ -16,6 +16,7 @@
     "require": {
         "php": "^7.3",
         "alexpechkarev/geometry-library": "^1.0",
+        "alexusmai/laravel-file-manager": "^2.5",
         "barryvdh/laravel-dompdf": "^0.8.6",
         "braintree/braintree_php": "^4.5",
         "brozot/laravel-fcm": "dev-master",
