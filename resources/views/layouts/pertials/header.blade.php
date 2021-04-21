@@ -37,15 +37,8 @@
             </a>
             <div class="navigation-content">
                 <ul class="navigation">
-
-                {{-- <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/pricing">Pricing</a></li>
-                <li><a href="/contact">Contact</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Register</a></li> --}}
-                                           <li><a href="#">RIDE</a></li>
-                                            <li><a href="#">DRIVE</a></li>
+                <li><a href="/signin">LOGIN</a></li>
+                <li><a href="/signup">REGISTER</a></li>
 
                                             {{-- <li><a href="#">HELP</a></li>  --}}
                 </ul>
@@ -100,8 +93,6 @@
     </div>
 </div>   --}}
 
-
-
 <div id="sidenav" class="sidenav d-none">
     <div class="sideber-menu-item">
         <a href="/" class="siderber-logo mb-50">
@@ -109,10 +100,10 @@
         </a>
         <a  class="closebtn" >&times;</a>
         <div class="sideber-menu-item-hover">
-            <a href="/about">About</a>
+            <a href="/about">About Us</a>
             <a href="/pricing">Pricing</a>
-            <a href="/admin/login">Login</a>
-            <a href="/admin/login">Register</a>
+            <a href="/signin">Login</a>
+            <a href="/signup">Register</a>
             <a href="/contact">Contact Us</a>
         </div>
     </div>
