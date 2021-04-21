@@ -1,8 +1,12 @@
-@extends('layouts.master')
+@extends('admin.templateAdd')
 @section('css')
+<style>
+.content-wrapper{margin-top:70px;}
+</style>
 @endsection
 
-@section('content')
+@section('main')
+
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -21,7 +25,7 @@
     <section class="content">
       <div class="row">
         <!-- right column -->
-        <div class="col-md-8 col-sm-offset-2">
+        <div class="col-md-12 col-sm-offset-0">
           <!-- Horizontal Form -->
           <div class="box box-info">
             <div class="box-header with-border">

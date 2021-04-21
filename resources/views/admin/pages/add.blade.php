@@ -1,8 +1,11 @@
-@extends('layouts.master')
+@extends('admin.templateAdd')
 @section('css')
+<style>
+.content-wrapper{margin-top:70px;}
+</style>
 @endsection
+@section('main')
 
-@section('content')
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
