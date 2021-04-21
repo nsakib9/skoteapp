@@ -28,6 +28,13 @@
                     </a>
                 </li>
 
+                <li class="{{ (Route::current()->uri() == 'admin/dashboard') ? 'active' : ''  }}">
+                    <a href="{{ url($first_segment.'/files') }}" class="waves-effect">
+                        <i class="bx bx-home-circle"></i>
+                        <span key="t-dashboards">File Manager</span>
+                    </a>
+                </li>
+
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bx-user-circle"></i>
