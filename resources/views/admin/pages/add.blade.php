@@ -2,12 +2,17 @@
 @section('css')
 <style>
 .content-wrapper{margin-top:70px;}
+#content {
+	display: block !important;
+	width: 100%;
+	min-height: 500px;
+}
 </style>
 @endsection
 @section('main')
 
 <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper p-4">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -44,8 +49,8 @@
                 </div>
                 <div class="form-group">
                   <label for="input_content" class="col-sm-3 control-label">Content<em class="text-danger">*</em></label>
-                  <div class="col-sm-6">
-                    <textarea id="txtEditor" name="txtEditor"></textarea>
+                  <div class="col-sm-12">
+                    {{-- <textarea id="txtEditor" name="txtEditor"></textarea> --}}
                     <textarea id="content" name="content" hidden="true">{{ old('content') }}</textarea>
                     <span class="text-danger">{{ $errors->first('content') }}</span>
                   </div>
@@ -84,9 +89,9 @@
   </div>
   <!-- /.content-wrapper -->
   @endsection
-@push('scripts')
+{{-- @push('scripts')
 <script type="text/javascript">
 $("#txtEditor").Editor(); 
 $('.Editor-editor').html($('#content').val());
 </script>
-@endpush
+@endpush --}}

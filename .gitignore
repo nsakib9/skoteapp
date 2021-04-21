@@ -1,5 +1,5 @@
 /node_modules
-/public/storage
+# /public/storage
 /public/hot
 /storage/*.key
 /storage/trip_routes
@@ -7,6 +7,8 @@
 /.idea
 Homestead.json
 Homestead.yaml
+
+.env 
 
 /nbproject
 .idea
