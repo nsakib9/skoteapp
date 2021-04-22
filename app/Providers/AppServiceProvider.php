@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use App\Http\Helper\FacebookHelper;
 use App\Models\Admin;
+use App\Models\Setting;
+use App\Models\Menu;
 use App\Models\CarType;
 use App\Models\Currency;
 use App\Models\Language;
@@ -50,6 +52,12 @@ class AppServiceProvider extends ServiceProvider
 	 */
 	public function boot(UrlGenerator $url)
 	{
+
+
+		$setting = Setting::first();
+		$menus = Menu::all();
+		View::share(['setting'=> $setting, 'menus'=> $menus]);
+
 		if (\App::environment('production')) {
 			$url->forceScheme('https');
 		}

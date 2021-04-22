@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="{{asset('front_assets/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('front_assets/css/responsive.css')}}">
 	<link rel="stylesheet" href="{{asset('front_assets/css/font-awesome.min.css')}}">
-  
-    
 
 	@stack('header.css')
 
@@ -28,7 +26,7 @@
     <div class="container">
         <nav class="header-content">
             <a href="/" class="logo">
-                <img src="{{asset('front_assets/img/logo.png')}}" alt="">
+                <img src="{{asset('setting/'. $setting->logo_img)}}" alt="logo">
             </a>
             <a href="#" class="nav-toggler">
                 <span></span>
@@ -37,12 +35,11 @@
             </a>
             <div class="navigation-content">
                 <ul class="navigation">
-                <li><a href="/signin">LOGIN</a></li>
-                <li><a href="/signup">REGISTER</a></li>
-
-                                            {{-- <li><a href="#">HELP</a></li>  --}}
+                    @foreach($menus->where('type', 'topheader') as $menu)
+                        <li><a href="#">{{$menu->name}}</a></li>
+                    @endforeach
                 </ul>
-                <a href="#" class="btn btn-primary">Become a Driver</a>
+                <a href="#" class="btn btn-primary">{{$setting->button_text}}</a>
                 <div class="side-menu">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -100,11 +97,9 @@
         </a>
         <a  class="closebtn" >&times;</a>
         <div class="sideber-menu-item-hover">
-            <a href="/about">About Us</a>
-            <a href="/pricing">Pricing</a>
-            <a href="/signin">Login</a>
-            <a href="/signup">Register</a>
-            <a href="/contact">Contact Us</a>
+         @foreach($menus->where('type', 'rightsidebar') as $menu)
+            <a href="#">{{$menu->name}}</a>
+         @endforeach
         </div>
     </div>
 

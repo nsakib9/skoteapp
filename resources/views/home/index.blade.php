@@ -3,15 +3,15 @@
 
 
 <!--Banner Section-->
-<section class="hero-section" style="background-image:url({{url('/banner/'."$banner->banner_img")}})">
+<section class="hero-section">
     <div class="container">
         <div class="hero-content text-center">
-            <h1 class="text-bold text-uppercase">{{ $banner->line_one }}</h1>
-            <h1 class="text-uppercase mt-0">{{ $banner->line_two }}</h1>
-            <!--                 <h2 class="text-uppercase mt-30">We will treat you right</h2> -->
+            <h1 class="text-bold text-uppercase">QUALITY RIDE SHARE SERVICES</h1>
+            <h1 class="text-uppercase mt-0">CATERING TO YOUR EVERY NEED</h1>
+            <!--<h2 class="text-uppercase mt-30">We will treat you right</h2> -->
             <div class="buttons mt-40">
-                <a href="#" class="btn btn-primary">{{ $banner->button_one }}</a>
-                <a href="#" class="btn btn-primary">{{ $banner->button_two }}</a>
+                <a href="#" class="btn btn-primary">Try Zcon</a>
+                <a href="#" class="btn btn-primary">Sign up to drive</a>
             </div>
         </div>
     </div>

@@ -28,11 +28,18 @@ Route::group(['prefix' => (LOGIN_USER_TYPE=='company')?'company':'admin', 'middl
 
 	// Front pages routes
 	Route::view('files', 'home.files');
-	// Manage Banner
-	Route::get('banner', 'BannerController@index')->middleware('admin_can:view_rider');
-	Route::match(array('GET', 'POST'), 'add_banner', 'BannerController@add')->middleware('admin_can:create_rider');
-	Route::match(array('GET', 'POST'), 'edit_banner/{id}', 'BannerController@update')->middleware('admin_can:update_rider');
-	Route::match(array('GET', 'POST'), 'delete_banner/{id}', 'BannerController@delete')->middleware('admin_can:delete_rider');
+
+	// Manage Header footer setting
+	Route::get('setting', 'SettingController@index')->middleware('admin_can:view_rider');
+	Route::match(array('GET', 'POST'), 'add_setting', 'SettingController@add')->middleware('admin_can:create_rider');
+	Route::match(array('GET', 'POST'), 'edit_setting/{id}', 'SettingController@update')->middleware('admin_can:update_rider');
+	Route::match(array('GET', 'POST'), 'delete_setting/{id}', 'SettingController@delete')->middleware('admin_can:delete_rider');
+
+	// Manage Menu
+	Route::get('menu', 'MenuController@index')->middleware('admin_can:view_rider');
+	Route::match(array('GET', 'POST'), 'add_menu', 'MenuController@add')->middleware('admin_can:create_rider');
+	Route::match(array('GET', 'POST'), 'edit_menu/{id}', 'MenuController@update')->middleware('admin_can:update_rider');
+	Route::match(array('GET', 'POST'), 'delete_menu/{id}', 'MenuController@delete')->middleware('admin_can:delete_rider');
 
 	//Front pages routes end
 

@@ -18,13 +18,13 @@
  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <section class="content-header">
-      <h1 style="display: inline-block; "> Manage Banners </h1>
+      <h1 style="display: inline-block; "> Manage Menu </h1>
       <ol style=" float: right;" class="breadcrumb">
         <li>
           <a href="{{ url(LOGIN_USER_TYPE.'/dashboard') }}"> <i class="fa fa-dashboard"> </i> Home </a>
         </li>
         <li>
-          <a href="{{ url(LOGIN_USER_TYPE.'/banner') }}">/ Banners </a>
+          <a href="{{ url(LOGIN_USER_TYPE.'/menu') }}">/ Menu </a>
         </li>
       </ol>
     </section>
@@ -34,10 +34,8 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              @if($banner <= 0)
               @if(Auth::guard('admin')->user()->can('create_rider'))
-                <div style="float:right;"><a class="btn btn-success" href="{{ url('admin/add_banner') }}">Add Banner</a></div>
-              @endif
+                <div style="float:right;"><a class="btn btn-success" href="{{ url('admin/add_menu') }}">Add Menu</a></div>
               @endif
             </div>
             <!-- /.box-header -->

@@ -29,8 +29,7 @@ class HomeController extends Controller
     
 	public function newindex()
     {
-        $banner = Banner::first();
-    	return view('home.index', compact('banner'));
+    	return view('home.index');
     }
 
 	public function pricing()

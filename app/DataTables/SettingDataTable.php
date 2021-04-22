@@ -13,11 +13,11 @@
 
 namespace App\DataTables;
 
-use App\Models\Banner;
+use App\Models\Setting;
 use Yajra\DataTables\Services\DataTable;
 use DB;
 
-class BannerDataTable extends DataTable
+class SettingDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -29,9 +29,9 @@ class BannerDataTable extends DataTable
     {
         return datatables()
             ->of($query)
-            ->addColumn('action', function ($banners) {
-                $edit = (auth('admin')->user()->can('update_rider')) ? '<a href="'.url('admin/edit_banner/'.$banners->id).'" class="btn btn-xs btn-primary"><i class="bx bx-edit"></i></a>&nbsp;' : '';
-                $delete = (auth('admin')->user()->can('delete_rider')) ? '<a data-href="'.url('admin/delete_banner/'.$banners->id).'" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#confirm-delete"><i class="bx bx-trash"></i></a>&nbsp;':'';
+            ->addColumn('action', function ($setting) {
+                $edit = (auth('admin')->user()->can('update_rider')) ? '<a href="'.url('admin/edit_setting/'.$setting->id).'" class="btn btn-xs btn-primary"><i class="bx bx-edit"></i></a>&nbsp;' : '';
+                $delete = (auth('admin')->user()->can('delete_rider')) ? '<a data-href="'.url('admin/delete_setting/'.$setting->id).'" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#confirm-delete"><i class="bx bx-trash"></i></a>&nbsp;':'';
 
                 return $edit.$delete;
             });
@@ -40,13 +40,13 @@ class BannerDataTable extends DataTable
     /**
      * Get query source of dataTable.
      *
-     * @param Banner $model
+     * @param Setting $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(Banner $model)
+    public function query(Setting $model)
     {
-        $banners = $model->select('banners.id as id', 'banners.line_one', 'banners.line_two','banners.banner_img','banners.button_one','banners.button_two', 'created_at as created')->groupBy('id');
-        return $banners;
+        $settings = $model->select('settings.id as id', 'settings.logo_img','settings.button_text', 'created_at as created')->groupBy('id');
+        return $settings;
     }
 
     /**
@@ -75,12 +75,9 @@ class BannerDataTable extends DataTable
     {
         // $mobile_number_column = (isLiveEnv())?'hidden_mobile':'mobile_number';
         return [
-            ['data' => 'id', 'name' => 'banners.id', 'title' => 'Id'],
-            ['data' => 'line_one', 'name' => 'banners.line_one', 'title' => 'Line One'],
-            ['data' => 'line_two', 'name' => 'banners.line_two', 'title' => 'Line Two'],
-            ['data' => 'button_one', 'name' => 'banners.button_one', 'title' => 'Button One'],
-            ['data' => 'button_two', 'name' => 'banners.button_two', 'title' => 'Button Two'],
-            ['data' => 'created', 'name' => 'banners.created', 'title' => 'Created At'],
+            ['data' => 'id', 'name' => 'settings.id', 'title' => 'Id'],
+            ['data' => 'button_text', 'name' => 'settings.button_text', 'title' => 'Button Text'],
+            ['data' => 'created', 'name' => 'settings.created', 'title' => 'Created At'],
             ['data' => 'action', 'name' => 'action', 'title' => 'Action', 'orderable' => false, 'searchable' => false, 'exportable' => false],
         ];
     }
@@ -92,6 +89,6 @@ class BannerDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'riders_' . date('YmdHis');
+        return 'settings_' . date('YmdHis');
     }
 }
