@@ -45,7 +45,7 @@ class MenuDataTable extends DataTable
      */
     public function query(Menu $model)
     {
-        $menus = $model->select('menus.id as id', 'menus.name','menus.type')->groupBy('id');
+        $menus = $model->select('menus.id as id', 'menus.name','menus.type','menus.url')->groupBy('id');
         return $menus;
     }
 
@@ -78,6 +78,7 @@ class MenuDataTable extends DataTable
             ['data' => 'id', 'name' => 'menus.id', 'title' => 'Id'],
             ['data' => 'name', 'name' => 'menus.name', 'title' => 'Name'],
             ['data' => 'type', 'name' => 'menus.type', 'title' => 'Type'],
+            ['data' => 'url', 'name' => 'menus.url', 'title' => 'Url'],
             ['data' => 'action', 'name' => 'action', 'title' => 'Action', 'orderable' => false, 'searchable' => false, 'exportable' => false],
         ];
     }

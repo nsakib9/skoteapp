@@ -27,22 +27,38 @@
 						<span class="text-danger">(*)Fields are Mandatory</span>
 						<div class="form-group">
 							<label class="col-sm-3 control-label">Menu Name <em class="text-danger">*</em></label>
-							<div class="row">
+							
 							<div class="col-sm-8">
 								<input type="text" name="name" value="{{$menu->name }}" class="form-control">
 
 								<span class="text-danger">{{ $errors->first('name') }}</span>
 							</div>
-						</div>
+						
 						</div>
 						<br><br>
 						<div class="form-group">
 							<label for="input_button_one" class="col-sm-3 control-label">Menu Type<em class="text-danger">*</em></label>
+							
 							<div class="col-sm-8">
-								<input type="text" name="type" value="{{$menu->type }}" class="form-control">
-
+								<select class='form-control' name='type'>
+									<option value="" disabled>Select Menu Type</option>
+									<option value="header" @if($menu->type == 'header') selected @endif>Top Header</option>
+									<option value="sidebar" @if($menu->type == 'sidebar') selected @endif>Right Sidebar</option>
+								</select>
 								<span class="text-danger">{{ $errors->first('type') }}</span>
 							</div>
+						
+						</div>
+						<br><br>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Menu Url <em class="text-danger">*</em></label>
+							
+							<div class="col-sm-8">
+								<input type="text" name="url" value="{{$menu->url }}" class="form-control">
+
+								<span class="text-danger">{{ $errors->first('url') }}</span>
+							</div>
+							
 						</div>
 					</div>
 					<br><br>

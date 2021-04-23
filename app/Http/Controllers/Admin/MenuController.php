@@ -51,12 +51,14 @@ class MenuController extends Controller
                 
                 'name'   => 'required',
                 'type'     => 'required',
+                'url'     => 'required',
             );
 
             // Add menu Validation Custom Names
             $attributes = array(
                 'name' => trans('old.messages.user.name'),
                 'type' => trans('old.messages.user.type'),
+                'url' => trans('old.messages.user.url'),
             );
 
             // Edit menu Validation Custom Fields message
@@ -74,6 +76,7 @@ class MenuController extends Controller
             $menu = new Menu();
             $menu->name = $request->name;
             $menu->type = $request->type;
+            $menu->url = $request->url;
             $menu->save();
             $menu->save();
             flashMessage('success', 'Added Successfully');
@@ -102,6 +105,7 @@ class MenuController extends Controller
             $rules = array(
                 'name'    => 'required',
                 'type'    => 'required',
+                'url'    => 'required',
             );
             // Edit menu Validation Custom Fields message
             $messages =array(
@@ -111,6 +115,7 @@ class MenuController extends Controller
             $attributes = array(
                 'name' => trans('old.messages.user.name'),
                 'type' => trans('old.messages.user.type'),
+                'url' => trans('old.messages.user.url'),
             );
 
             $validator = Validator::make($request->all(), $rules,$messages, $attributes);
@@ -123,6 +128,7 @@ class MenuController extends Controller
 
             $menu->name = $request->name;
             $menu->type = $request->type;
+            $menu->url = $request->url;
             $menu->save();
 
             flashMessage('success', trans('messages.user.update_success'));

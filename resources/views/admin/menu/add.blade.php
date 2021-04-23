@@ -41,12 +41,28 @@
 						<br><br>
 						<div class="form-group">
 							<label for="input_button_one" class="col-sm-3 control-label">Menu Type<em class="text-danger">*</em></label>
+							
 							<div class="col-sm-8">
-								<input type="text" name="type" placeholder="menu type" class="form-control">
-
+								<select class='form-control' name='type'>
+									<option value="" selected disabled>Select Menu Type</option>
+									<option value="header">Top Header</option>
+									<option value="sidebar">Right Sidebar</option>
+								</select>
 								<span class="text-danger">{{ $errors->first('type') }}</span>
 							</div>
+						
 						</div>
+						<br><br>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Menu Url <em class="text-danger">*</em></label>
+							
+							<div class="col-sm-8">
+								<input type="text" name="url" placeholder="menu url" class="form-control">
+
+								<span class="text-danger">{{ $errors->first('url') }}</span>
+							</div>
+							</div>
+						
 					</div>
 					<br><br>
 					<div class="card-footer shadow-sm bg-body rounded">

@@ -35,8 +35,8 @@
             </a>
             <div class="navigation-content">
                 <ul class="navigation">
-                    @foreach($menus->where('type', 'topheader') as $menu)
-                        <li><a href="#">{{$menu->name}}</a></li>
+                    @foreach($menus->where('type', 'header') as $menu)
+                        <li><a href="{{url("$menu->url")}}">{{$menu->name}}</a></li>
                     @endforeach
                 </ul>
                 <a href="#" class="btn btn-primary">{{$setting->button_text}}</a>
@@ -97,8 +97,8 @@
         </a>
         <a  class="closebtn" >&times;</a>
         <div class="sideber-menu-item-hover">
-         @foreach($menus->where('type', 'rightsidebar') as $menu)
-            <a href="#">{{$menu->name}}</a>
+         @foreach($menus->where('type', 'sidebar') as $menu)
+            <a href="{{url("$menu->url")}}">{{$menu->name}}</a>
          @endforeach
         </div>
     </div>
