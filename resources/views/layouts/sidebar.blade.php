@@ -71,7 +71,7 @@
                                 @if(@$user->can('manage_rider_referrals'))
                                 <li class="{{ (Route::current()->uri() == 'admin/referrals/rider') ? 'active' : ''  }}">
                                     <a href="{{ url('admin/referrals/rider') }}">
-                                        <span>Client(Rider)</span>
+                                        <span>Client (Rider)</span>
                                     </a>
                                 </li>
                                 @endif
@@ -256,6 +256,9 @@
                                 <span key="t-ecommerce">Front Settings</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
+                                @if(@$user->can('manage_static_pages'))
+                                <li class="{{ (Route::current()->uri() == 'admin/pages') ? 'active' : ''  }}"><a href="{{ url('admin/pages') }}"><i class="fab fa-bity"></i><span>Manage Static Pages</span></a></li>
+                                @endif
         
                                 <li><a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <span key="t-ecommerce">Pages</span>
@@ -274,6 +277,24 @@
                 </li>
                 @endif
 
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-user-circle"></i>
+                        <span key="t-ecommerce">User Management</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        @if(@$user->can('view_rider'))
+                        <li class="{{ (Route::current()->uri() == 'admin/rider') ? 'active' : ''  }}"><a href="{{ url('admin/rider') }}">Client in Zcon</a></li>
+                        @endif
+                        @if($company_user || @$user->can('view_driver'))
+                        <li class="{{ (Route::current()->uri() == $first_segment.'/driver') ? 'active' : ''  }}"><a href="{{ url($first_segment.'/driver') }}">Driver in Zcon</a></li>
+                        @endif
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Staff</a></li>
+                        <li><a href="#">Admin</a></li>
+                    </ul>
+                </li>
+
                 {{-- @if($company_user || @$user->can('manage_wallet'))
                 <li class="treeview {{ (@$navigation == 'manage_wallet') ? 'active' : ''  }}">
                     <a href="{{ route('wallet',['user_type' => 'Rider']) }}"><i class="fa fa-circle-o"></i>
@@ -288,7 +309,8 @@
                     </a>
                 </li> --}}
 
-                {{-- <li>
+                {{-- 
+                    <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bx-user-circle"></i>
                         <span key="t-ecommerce">User Management</span>
