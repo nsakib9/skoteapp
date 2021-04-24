@@ -17,7 +17,7 @@ Route::get('app/{type}', 'HomeController@redirect_to_app')->name('redirect_to_ap
 
 Route::group(['middleware' =>'locale'], function () {
 	Route::get('/', 'HomeController@newindex');
-	// Route::redirect('/', '/home');
+	Route::redirect('/', '/home');
     
     // Route::get('/', 'HomeController@index');
     // Route::get('/pricing', 'HomeController@pricing');

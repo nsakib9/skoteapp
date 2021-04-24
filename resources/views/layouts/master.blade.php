@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     {{-- file manager styles --}}
     <link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
+    <style>
+.overflow-h{overflow: hidden;}
+        
+    </style>
 
 </head>
 
