@@ -16,7 +16,7 @@ Route::match(array('GET', 'POST'),'apple_callback', 'UserController@apple_callba
 Route::get('app/{type}', 'HomeController@redirect_to_app')->name('redirect_to_app');
 
 Route::group(['middleware' =>'locale'], function () {
-	// Route::redirect('/', '/home');
+	Route::redirect('/', '/home');
     Route::get('/', 'HomeController@newindex');
     // Route::get('/', 'HomeController@index');
     // Route::get('/pricing', 'HomeController@pricing');
