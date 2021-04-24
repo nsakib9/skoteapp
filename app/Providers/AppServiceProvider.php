@@ -11,6 +11,7 @@ use App\Models\Admin;
 use App\Models\Setting;
 use App\Models\Menu;
 use App\Models\CustomCSS;
+use App\Models\Footer;
 use App\Models\CarType;
 use App\Models\Currency;
 use App\Models\Language;
@@ -58,7 +59,8 @@ class AppServiceProvider extends ServiceProvider
 		$setting = Setting::first();
 		$menus = Menu::all();
 		$customCSS = CustomCSS::all();
-		View::share(['setting'=> $setting, 'menus'=> $menus, 'customCSS'=> $customCSS]);
+		$footer = Footer::first();
+		View::share(['setting'=> $setting, 'menus'=> $menus, 'customCSS'=> $customCSS, 'footer'=> $footer]);
 
 		if (\App::environment('production')) {
 			$url->forceScheme('https');

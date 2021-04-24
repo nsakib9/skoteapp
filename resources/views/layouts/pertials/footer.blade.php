@@ -3,30 +3,33 @@
         <div class="row">
             <div class="col-sm-6 col-md-3 mb-xs-30 mb-sm-30">
                 <div class="footer-block">
-                    <h5 class="text-bold text-uppercase">Company</h5>
+                    {{$footer?$footer->leftColumn:''}}
+                    {{--  <h5 class="text-bold text-uppercase">Company</h5>
                     <ul class="list-unstyled">
                         <li><a href="/about">About</a></li>
                         <li><a href="/pricing">Pricing</a></li>
                         <li><a href="/admin/login">Login</a></li>
                         <li><a href="/admin/login">Register</a></li>
                         <li><a href="/contact">Contact Us</a></li>
-                    </ul>
+                    </ul>  --}}
                 </div>
             </div>
             <div class="col-sm-6 col-md-3 mb-xs-30 mb-sm-30">
                 <div class="footer-block">
-                    <h5 class="text-bold text-uppercase">Need Help?</h5>
+                    {{$footer? $footer->middleColumn: ''}}
+                    {{--  <h5 class="text-bold text-uppercase">Need Help?</h5>
                     <ul class="list-unstyled">
                         <li><a href="/contact">Contact</a></li>
                         <li><a href="#">FAQs</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Use</a></li>
                         <li><a href="#">LET’S KEEP IN TOUCH</a></li>
-                    </ul>
+                    </ul>  --}}
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 mb-xs-30">
-                <div class="footer-block">
+                {{$footer? $footer->rightColumn : ''}}
+                {{--  <div class="footer-block">
                     <div class="flex mb-10">
                         <h5 class="text-bold text-uppercase">LET’S KEEP IN TOUCH</h5>
                         <div class="language-select dropdown">
@@ -89,7 +92,7 @@
                             <a href="#"><img src="{{asset('front_assets/img/play-store.png')}}" alt=""></a>
                         </div>
                     </div>
-                </div>
+                </div>  --}}
             </div>
         </div>
     </div>
@@ -97,7 +100,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <p>All Rights Reserved Zcon Services, LLC, 2021 | Powered by <a href="#">Ameltek</a>, <a href="#">Inc</a>.</p>
+                    {{ $footer? $footer->bottomRow : ''}}
+                    {{--  <p>All Rights Reserved Zcon Services, LLC, 2021 | Powered by <a href="#">Ameltek</a>, <a href="#">Inc</a>.</p>  --}}
                 </div>
             </div>
         </div>
