@@ -49,9 +49,9 @@
 						<div class="form-group">
 							<label class="col-sm-3 control-label">Right Column <em class="text-danger">*</em></label>
 							<div class="col-sm-8">
-								<textarea name="RightColumn" class="form-control" rows="3"></textarea>
+								<textarea name="rightColumn" class="form-control" rows="3"></textarea>
 
-								<span class="text-danger">{{ $errors->first('RightColumn') }}</span>
+								<span class="text-danger">{{ $errors->first('rightColumn') }}</span>
 							</div>
 						</div>
 						<div class="form-group">

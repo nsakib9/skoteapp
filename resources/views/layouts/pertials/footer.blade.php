@@ -3,7 +3,8 @@
         <div class="row">
             <div class="col-sm-6 col-md-3 mb-xs-30 mb-sm-30">
                 <div class="footer-block">
-                    {{$footer?$footer->leftColumn:''}}
+                    
+                    {!!$footer?$footer->leftColumn:''!!}
                     {{--  <h5 class="text-bold text-uppercase">Company</h5>
                     <ul class="list-unstyled">
                         <li><a href="/about">About</a></li>
@@ -16,7 +17,7 @@
             </div>
             <div class="col-sm-6 col-md-3 mb-xs-30 mb-sm-30">
                 <div class="footer-block">
-                    {{$footer? $footer->middleColumn: ''}}
+                    {!!$footer? $footer->middleColumn: ''!!}
                     {{--  <h5 class="text-bold text-uppercase">Need Help?</h5>
                     <ul class="list-unstyled">
                         <li><a href="/contact">Contact</a></li>
@@ -28,7 +29,7 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 mb-xs-30">
-                {{$footer? $footer->rightColumn : ''}}
+                {!!$footer? $footer->rightColumn : ''!!}
                 {{--  <div class="footer-block">
                     <div class="flex mb-10">
                         <h5 class="text-bold text-uppercase">LET’S KEEP IN TOUCH</h5>
@@ -100,7 +101,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    {{ $footer? $footer->bottomRow : ''}}
+                    {!! $footer? $footer->bottomRow : ''!!}
                     {{--  <p>All Rights Reserved Zcon Services, LLC, 2021 | Powered by <a href="#">Ameltek</a>, <a href="#">Inc</a>.</p>  --}}
                 </div>
             </div>

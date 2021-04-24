@@ -59,7 +59,6 @@ class FooterController extends Controller
                 
             );
 
-            dd($request->all());
 
             // Add menu Validation Custom Names
             $attributes = array(
@@ -78,12 +77,12 @@ class FooterController extends Controller
             $validator = Validator::make($request->all(), $rules,$messages, $attributes);
            
 
-            if ($validator->fails()) {
-                return back()->withErrors($validator)->withInput();
-            }
+            // if ($validator->fails()) {
+            //     return back()->withErrors($validator)->withInput();
+            // }
 
             $footer = new Footer();
-            dd($footer);
+
             $footer->leftColumn = $request->leftColumn;
             $footer->middleColumn = $request->middleColumn;
             $footer->rightColumn = $request->rightColumn;
@@ -139,9 +138,9 @@ class FooterController extends Controller
 
             $validator = Validator::make($request->all(), $rules,$messages, $attributes);
 
-            if ($validator->fails()) {
-                return back()->withErrors($validator)->withInput();
-            }
+            // if ($validator->fails()) {
+            //     return back()->withErrors($validator)->withInput();
+            // }
 
             $footer = Footer::find($request->id);
             

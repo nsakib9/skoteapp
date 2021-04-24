@@ -30,8 +30,8 @@ class FooterDataTable extends DataTable
         return datatables()
             ->of($query)
             ->addColumn('action', function ($footer) {
-                $edit = (auth('admin')->user()->can('update_rider')) ? '<a href="'.url('admin/edit_customCSS/'.$footer->id).'" class="btn btn-xs btn-primary"><i class="bx bx-edit"></i></a>&nbsp;' : '';
-                $delete = (auth('admin')->user()->can('delete_rider')) ? '<a data-href="'.url('admin/delete_customCSS/'.$footer->id).'" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#confirm-delete"><i class="bx bx-trash"></i></a>&nbsp;':'';
+                $edit = (auth('admin')->user()->can('update_rider')) ? '<a href="'.url('admin/edit_footer/'.$footer->id).'" class="btn btn-xs btn-primary"><i class="bx bx-edit"></i></a>&nbsp;' : '';
+                $delete = (auth('admin')->user()->can('delete_rider')) ? '<a data-href="'.url('admin/delete_footer/'.$footer->id).'" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#confirm-delete"><i class="bx bx-trash"></i></a>&nbsp;':'';
 
                 return $edit.$delete;
             });
