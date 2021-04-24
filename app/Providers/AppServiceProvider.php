@@ -10,6 +10,7 @@ use App\Http\Helper\FacebookHelper;
 use App\Models\Admin;
 use App\Models\Setting;
 use App\Models\Menu;
+use App\Models\CustomCSS;
 use App\Models\CarType;
 use App\Models\Currency;
 use App\Models\Language;
@@ -56,7 +57,8 @@ class AppServiceProvider extends ServiceProvider
 
 		$setting = Setting::first();
 		$menus = Menu::all();
-		View::share(['setting'=> $setting, 'menus'=> $menus]);
+		$customCSS = CustomCSS::all();
+		View::share(['setting'=> $setting, 'menus'=> $menus, 'customCSS'=> $customCSS]);
 
 		if (\App::environment('production')) {
 			$url->forceScheme('https');

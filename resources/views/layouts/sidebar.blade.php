@@ -143,6 +143,7 @@
                             <ul class="sub-menu" aria-expanded="false">
                                 <li><a href="{{ url('admin/setting') }}" key="t-products">Setting</a></li>
                                 <li><a href="{{ url('admin/menu') }}" key="t-products">Menu</a></li>
+                                <li><a href="{{ url('admin/customCSS') }}" key="t-products">Custom CSS</a></li>
                             </ul>
                         </li>
                     </ul>

@@ -41,6 +41,12 @@ Route::group(['prefix' => (LOGIN_USER_TYPE=='company')?'company':'admin', 'middl
 	Route::match(array('GET', 'POST'), 'edit_menu/{id}', 'MenuController@update')->middleware('admin_can:update_rider');
 	Route::match(array('GET', 'POST'), 'delete_menu/{id}', 'MenuController@delete')->middleware('admin_can:delete_rider');
 
+	// Manage custom css
+	Route::get('customCSS', 'CustomCSSController@index')->middleware('admin_can:view_rider');
+	Route::match(array('GET', 'POST'), 'add_customCSS', 'CustomCSSController@add')->middleware('admin_can:create_rider');
+	Route::match(array('GET', 'POST'), 'edit_customCSS/{id}', 'CustomCSSController@update')->middleware('admin_can:update_rider');
+	Route::match(array('GET', 'POST'), 'delete_customCSS/{id}', 'CustomCSSController@delete')->middleware('admin_can:delete_rider');
+
 	//Front pages routes end
 
 	// Admin Users and permission routes

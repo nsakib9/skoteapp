@@ -16,12 +16,18 @@
     <link rel="stylesheet" href="{{asset('front_assets/css/responsive.css')}}">
 	<link rel="stylesheet" href="{{asset('front_assets/css/font-awesome.min.css')}}">
 
-	@stack('header.css')
+    <style>
+        @foreach($customCSS as $css)
+            {{$css->csscode}}
+       @endforeach
+    </style>
+
+    @stack('header.css')
 
 </head>
 
 <body>
-    
+
 <header class="header sticky-wrapper" id="sticker">
     <div class="container">
         <nav class="header-content">
