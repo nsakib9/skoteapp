@@ -52,8 +52,8 @@ Route::group(['middleware' =>'locale'], function () {
 	Route::get('facebookAuthenticate', 'UserController@facebookAuthenticate');
 	Route::get('googleAuthenticate', 'UserController@googleAuthenticate');
 
-	Route::view('signin', 'user.signin');
-	Route::view('signup', 'user.signup');
+	// Route::view('signin', 'user.signin');
+	// Route::view('signup', 'user.signup');
 
 	Route::view('safety', 'ride.safety');
 	Route::view('ride', 'ride.ride');
