@@ -940,3 +940,374 @@ button.btn.sing-in-button {
 .signup-top-text {
     text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+/*rider sing in*/
+
+.stage-wrapper.narrow {
+    width: 550px;
+    position: relative;
+    z-index: 20;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.soft-tiny {
+    padding: 12px !important;
+}
+.soft-tiny h4 {
+    font-size: 2.4rem;
+    line-height: 1.33333;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 900 !important;
+}
+.hide {
+    display: none !important;
+}
+.btn--arrow {
+    padding: 11px 20px !important;
+    text-align: left;
+}
+.btn--full {
+    width: 100%;
+}
+.blue-signin-btn {
+    border: 2px solid #330C53;
+    border-radius: 0;
+    font-family: ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    outline: medium none;
+    padding: 11px 20px;
+    position: relative;
+    text-transform: uppercase;
+    background-color: #330C53;
+    color: #ffffff;
+    text-decoration: none;
+}
+#sign-up-link-only {
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+}
+.or-text {
+    font-size: 20px !important;
+    margin-bottom: 16px !important;
+    margin-top: 24px !important;
+}
+.black-btn {
+    width: 100%;
+    display: inline-block;
+    margin-left: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #FFF;
+    background: #000 !important;
+}
+.violet-btn.btn-facebook {
+    width: 100%;
+    display: inline-block;
+}
+.violet-btn {
+    background-color: #3b5998;
+    border-color: #3b5998;
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: #fff;
+    font-family: ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    outline: medium none;
+    padding: 11px 20px;
+    position: relative;
+    text-transform: uppercase;
+}
+.white-btn.google-btn {
+    width: 100%;
+    display: inline-block;
+    margin-left: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.btn--arrow {
+    padding: 11px 20px !important;
+    text-align: left;
+}
+.social-login .fa {
+    font-size: 20px;
+    vertical-align: text-bottom;
+}
+.btn--arrow .icon_right-arrow-thin {
+    font-size: 1.4em;
+    position: absolute;
+    right: 20px;
+    transition: margin 0.4s ease 0s;
+}
+.blue-signin-btn:hover, .blue-signin-btn:focus, .blue-signin-btn:active {
+    background-color: #330C53;
+    border-color: #330C53;
+    color: #fff;
+}
+.email_phone-sec.social-login .btn:hover {
+    color: #ffffff;
+}
+
+
+
+/*trems-service*/
+.content-trems-service p {
+    font-size: 11pt;
+}
+.content-trems-service h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.content-trems-service h5 {
+    font-size: 16px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+
+/*signup_driver*/
+.layout--join.driver_banner_join {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    background-position: bottom left;
+}
+.join-page .layout__item.layout--join__left-item {
+    margin-left: 40px !important;
+    margin-right: 40px !important;
+    width: 41.666% !important;
+    float: left;
+}
+.join-page .bit {
+    background-position: 50% 50% !important;
+    display: block;
+    height: 61px !important;
+    padding: 18px !important;
+    margin: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    width: 170px;
+}
+.join-page .driver_banner_join .layout__item.layout--join__hero-item {
+    width: 350px !important;
+}
+.layout--join.driver_banner_join .layout {
+    margin-left: 0 !important;
+}
+._style_3EKecM {
+    background-color: #fff !important;
+    border-color: #e5e5e4 !important;
+    border-radius: 3px !important;
+    border-style: solid !important;
+    border-width: 2px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    height: 36px !important;
+    transition: all 0.4s ease 0s !important;
+}
+.driver-signup-form-join-legacy input._style_3vhmZK {
+    line-height: 20px !important;
+}
+.join-page .push-tiny--bottom--legacy {
+    margin-bottom: 12px !important;
+}
+.mobile-code .select.select--xl {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    z-index: 9;
+}
+.float label {
+    color: #717171;
+    font-size: 11px;
+    left: 18px;
+    opacity: 0;
+    position: absolute;
+    top: 6px;
+    transition: all 0.2s ease 0s;
+    z-index: 1;
+    font-weight: 500;
+}
+#mobile_country {
+    border-right: 0 none !important;
+    margin-bottom: 0;
+    padding-right: 6px !important;
+}
+.layout--join {
+    background: url(image/become_dri.jpg) no-repeat bottom center;
+    background-size: cover;
+    padding: 40px !important;
+    min-height: 650px;
+}
+.join-page .layout__item.layout--join__hero-item {
+    background-color: #f1f1f1 !important;
+    float: right;
+    padding: 32px !important;
+    position: relative !important;
+    text-align: left;
+    width: 324px !important;
+}
+._style_3vhmZK {
+    background-color: transparent !important;
+    box-sizing: border-box !important;
+    color: #000 !important;
+    flex-grow: 1 !important;
+    font-family: ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    line-height: 24px !important;
+    margin-bottom: 0 !important;
+    max-width: 100% !important;
+    outline: 0 none !important;
+    padding: 6px 10px !important;
+    transition: all 0.4s ease 0s !important;
+}
+
+._style_3vhmZK {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd !important;
+}
+.layout a.btn {
+    margin: 20px auto !important;
+    display: block;
+}
+.btn.btn--primary {
+    background-color: #377037 !important;
+    border-color: #377037 !important;
+    padding: 7px 14px;
+    border-radius: 0;
+    border: 2px solid #377037;
+    outline: 0;
+    position: relative;
+    font-size: 13px;
+    line-height: 2.375;
+    padding-top: 1px;
+    padding-bottom: 4px;
+    color: #fff;
+    font-weight: bold;
+}
+.driver-signup-form-join-legacy input._style_3vhmZK {
+    line-height: 20px !important;
+}
+.select.select--xl option {
+    color: #000;
+}
+.mobile-code {
+    display: flex;
+}
+
+.mobile-code .layout {
+    position: relative;
+    height: 100%;
+    width: 100px;
+}
+.mobile-code #select-title-stage {
+    padding: 6px 8px;
+    position: inherit;
+    background-color: #fff;
+    opacity: 1;
+    border: 1px solid #ddd;
+    border-right: none;
+}
+#select-title-stage {
+    font-size: 14px;
+    font-weight: 500;
+    left: 0;
+    opacity: 0.4;
+    padding: 14px 12px;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s ease 0s;
+    z-index: 1;
+}
+
+.float label {
+    color: #717171;
+    font-size: 11px;
+    left: 18px;
+    opacity: 0;
+    position: absolute;
+    top: 6px;
+    transition: all 0.2s ease 0s;
+    z-index: 1;
+    font-weight: 500;
+}
+.legal {
+    font-size: 10.5px;
+    letter-spacing: 0.02em;
+    line-height: 18px;
+}
+.autocomplete-input-container {
+    max-width: 333px;
+    width: 100%;
+}
+.autocomplete-input {
+    text-align: center;
+}
+.driver-signup-form-join-legacy input._style_3vhmZK {
+    line-height: 20px !important;
+    border: 0px !important;
+}
+.layout > .layout__item {
+    font-size: 14px;
+}
+ul.autocomplete-results.home_address {
+    margin: 0px !important;
+}
+.three-section-join {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+}
+.portable-space {
+    padding: 52px 40px;
+    margin-right: 40px !important;
+    margin-left: 40px !important;
+}
+.sub-top {
+     margin-top: 32px !important;
+ }
+.sub-top h4 {
+    font-size: 25px;
+    margin-bottom: 31px !important;
+    margin-top: 0;
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 900 !important;
+}
+.top-section-sub-cont p {
+    letter-spacing: 0.7px;
+    line-height: 25px;
+    font-size: 14px;
+}
