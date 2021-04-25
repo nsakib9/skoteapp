@@ -26,9 +26,9 @@
                           <img class="white_logo" src="http://3.88.170.115:82/images/logo.png" style="width: 109px; height: 50px;background-size: contain;">
                       </a>
                   </div>-->
-                  <h1 class="push--bottom" style="line-height: 1.14; font-weight: 200; text-align: left; margin-bottom: 48px; letter-spacing: -0.02em; font-size: 50px ! important;">Drivers Co-op needs partners like you.
+                  <h1 class="push--bottom" style="line-height: 1.14; font-weight: 200; text-align: left; margin-bottom: 48px; letter-spacing: -0.02em; font-size: 50px ! important;">Zcon needs partners like you.
                   </h1>
-                  <p style="width: 70%; font-weight: 400; text-align: left;">Drive With Drivers Co-op and earn great money as an independent contractor. Get paid weekly just for helping our community of riders get rides around town. Be your own boss and get paid in fares for driving on your own schedule.
+                  <p style="width: 70%; font-weight: 400; text-align: left;">Drive With Zcon and earn great money as an independent contractor. Get paid weekly just for helping our community of riders get rides around town. Be your own boss and get paid in fares for driving on your own schedule.
                   </p>
               </div>
               <div class="layout__item layout--join__hero-item soft-gutter z-30" style="padding-top:0 !important;">
@@ -191,7 +191,7 @@
                 <h4 >Make good money.
                 </h4>
                 <div class="" >
-                  <p>Got a car? Turn it into a money machine. The city is buzzing and Drivers Co-op makes it easy for you  to cash in on the action. Plus, you've already got everything you need to get started.
+                  <p>Got a car? Turn it into a money machine. The city is buzzing and Zcon makes it easy for you  to cash in on the action. Plus, you've already got everything you need to get started.
                                           </p>
                 </div>
               </div>
@@ -205,7 +205,7 @@
               <div class="sub-top" >
                 <h4 >Drive when you want.</h4>
                 <div class="" >
-                   <p>Need something outside the 9 to 5? As an independent contractor with Drivers Co-op, you’ve got freedom and flexibility to drive whenever you have time. Set your own schedule, so you can be there for all of life’s most important moments.
+                   <p>Need something outside the 9 to 5? As an independent contractor with Zcon, you’ve got freedom and flexibility to drive whenever you have time. Set your own schedule, so you can be there for all of life’s most important moments.
                                           </p>
                 </div>
               </div>
@@ -220,7 +220,7 @@
               <div class="sub-top" >
                 <h4 >No office, no boss.</h4>
                 <div class="" >
-                  <p>Whether you’re supporting your family or saving for something big, Drivers Co-op gives you the freedom to get behind the wheel when it makes sense for you. Choose when you drive, where you go, and who you pick up.
+                  <p>Whether you’re supporting your family or saving for something big, Zcon gives you the freedom to get behind the wheel when it makes sense for you. Choose when you drive, where you go, and who you pick up.
                                           </p>
                 </div>
               </div>
