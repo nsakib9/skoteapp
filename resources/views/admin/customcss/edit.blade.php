@@ -16,7 +16,7 @@
 	</section>
 	<section class="content">
 		<div class="row">
-			<div class="col-md-8 offset-2">
+			<div class="col-md-10 offset-1">
 				<div class="card card-danger">
 					<div class="card-header  p-3 mb-5 bg-body rounded with-border">
 						<h3 class="card-title">Edit Custom CSS Form</h3>
@@ -25,17 +25,17 @@
 						@csrf
 						<div class="card-body">
 							<span class="text-danger">(*)Fields are Mandatory</span>
-							<div class="form-group">
-								<label class="col-sm-3 ">customcss Name <em class="text-danger">*</em></label>
-								<div class="col-sm-8">
-									<textarea name="csscode" class="form-control" rows="3" id="customcss">{{$customCSS->csscode}}</textarea>
+							<div class="form-group overflow-h">
+								<label class="col-sm-12 ">customcss Name <em class="text-danger">*</em></label>
+								<div class="col-sm-12">
+									<textarea name="csscode" class="form-control" rows="30" id="customcss">{{$customCSS->csscode}}</textarea>
 	
 									<span class="text-danger">{{ $errors->first('csscode') }}</span>
 								</div>
 							</div>
 						</div>
-					
-					<div class="card-footer mt-9">
+					<br>
+					<div class="card-footer mt-20">
 						<button type="submit" class="btn btn-info pull-right" name="submit" value="submit">Submit</button>
 						<button type="submit" class="btn btn-default pull-left" name="cancel" value="cancel">Cancel</button>
 					</div>
