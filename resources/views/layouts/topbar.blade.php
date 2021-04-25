@@ -10,6 +10,14 @@
         $first_segment = 'admin';
     }
 @endphp
+<style>
+    .navbar-header::after{
+        content: none;
+    }
+    .navbar-header::before{
+        content: none;
+    }
+</style>
 <header id="page-topbar">
     <div class="navbar-header">
         <div class="d-flex">
@@ -29,7 +37,7 @@
                         <img src="{{ URL::asset ('/assets/images/logo-light.svg') }}" alt="" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ URL::asset ('/front_assets/img/logo.png') }}" alt="" height="19">
+                        <img src="{{ URL::asset ('/front_assets/img/logo.png') }}" height="60px" alt="" height="19">
                     </span>
                 </a>
             </div>

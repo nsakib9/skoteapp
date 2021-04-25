@@ -14,6 +14,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-6 col-xl-5">
+                        <img src="{{ URL::asset('/front_assets/img/logo.png') }}" alt="" class="mb-3 logo-center" style="display: block;margin-left: auto;margin-right: auto;" height="34">
                         <div class="card overflow-hidden">
                             <div class="bg-primary bg-soft">
                                 <div class="row">
@@ -68,7 +69,7 @@
                                             </div>
                                         </div>
                                         <div class="mt-3 d-grid">
-                                            <button class="btn btn-primary waves-effect waves-light" type="submit">Log
+                                            <button style="background: #4E2465; color: #ffffff" class="btn waves-effect waves-light" type="submit">Log
                                                 In</button>
                                         </div>
 

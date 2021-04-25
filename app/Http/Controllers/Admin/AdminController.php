@@ -41,6 +41,9 @@ class AdminController extends Controller
      public function indexN(){
          return view('index');
      }
+     public function oldDashboard(){
+         return view('admin.index');
+     }
     public function index()
     {
         $data['users_count'] = User::count();

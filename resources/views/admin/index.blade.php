@@ -15,7 +15,7 @@
       <li class="active">Dashboard</li>
     </ol>
   </section>
-{{ dd(Auth::guard('admin')->user()->username)}}
+{{--  {{ dd(Auth::guard('admin')->user()->username)}}  --}}
   @if(LOGIN_USER_TYPE=='company' || auth('admin')->user()->can('manage_trips'))
   <!-- Main content -->
   <section class="content">

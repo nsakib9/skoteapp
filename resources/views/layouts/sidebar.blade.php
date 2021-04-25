@@ -26,6 +26,23 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-user-circle"></i>
+                        <span key="t-ecommerce">Users</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        @if(@$user->can('view_rider'))
+                        <li class="{{ (Route::current()->uri() == 'admin/rider') ? 'active' : ''  }}"><a href="{{ url('admin/rider') }}">Clients</a></li>
+                        @endif
+                        @if($company_user || @$user->can('view_driver'))
+                        <li class="{{ (Route::current()->uri() == $first_segment.'/driver') ? 'active' : ''  }}"><a href="{{ url($first_segment.'/driver') }}">Drivers</a></li>
+                        @endif
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Staff</a></li>
+                        <li><a href="#">Admin</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bx-bus"></i>
                         <span key="t-ecommerce">Vehicle</span>
                     </a>
@@ -277,23 +294,7 @@
                 </li>
                 @endif
 
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="bx bx-user-circle"></i>
-                        <span key="t-ecommerce">User Management</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        @if(@$user->can('view_rider'))
-                        <li class="{{ (Route::current()->uri() == 'admin/rider') ? 'active' : ''  }}"><a href="{{ url('admin/rider') }}">Client in Zcon</a></li>
-                        @endif
-                        @if($company_user || @$user->can('view_driver'))
-                        <li class="{{ (Route::current()->uri() == $first_segment.'/driver') ? 'active' : ''  }}"><a href="{{ url($first_segment.'/driver') }}">Driver in Zcon</a></li>
-                        @endif
-                        <li><a href="#">Partners</a></li>
-                        <li><a href="#">Staff</a></li>
-                        <li><a href="#">Admin</a></li>
-                    </ul>
-                </li>
+             
 
                 {{-- @if($company_user || @$user->can('manage_wallet'))
                 <li class="treeview {{ (@$navigation == 'manage_wallet') ? 'active' : ''  }}">

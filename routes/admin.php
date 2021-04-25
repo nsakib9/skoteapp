@@ -21,6 +21,7 @@ Route::group(['prefix' => (LOGIN_USER_TYPE=='company')?'company':'admin', 'middl
 
 	Route::redirect('/',LOGIN_USER_TYPE.'/dashboard')->name('dashboard');
 	Route::get('dashboard', 'AdminController@indexN');
+	Route::get('old/dashboard', 'AdminController@index');
 
 	if (LOGIN_USER_TYPE == 'admin') {
 		Route::get('logout', 'AdminController@logout');

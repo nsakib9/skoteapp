@@ -16,7 +16,7 @@
 
 @media(max-width:991px) {
     .nav-toggler {
-        display: block;
+        display: block !important;
     }
 
     .navigation-content {
