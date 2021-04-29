@@ -5,6 +5,9 @@
 @section('content')
 <div class="fees-wrap content-wrapper">
 	<section class="content-header">
+
+		@include('layouts.configurationMenu')
+
 		<h1>
 		Fees
 		</h1>

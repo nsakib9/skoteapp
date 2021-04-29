@@ -5,6 +5,9 @@
 @section('content')
 <div class="content-wrapper">
 	<section class="content-header">
+
+		@include('layouts.configurationMenu')
+
 		<h1> Payment Gateway </h1>
 		<ol class="breadcrumb">
 			<li>

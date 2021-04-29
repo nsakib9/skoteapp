@@ -38,12 +38,196 @@ class AdminController extends Controller
      * @return view index
      */
 
+    public function configuration(){
+        return view('admin.configuration');
+    }
+
      public function indexN(){
-         return view('index');
+        $data['users_count'] = User::count();
+        $data['total_driver'] = User::where('user_type','Driver')
+                                ->where(function($query)  {
+                                    if(LOGIN_USER_TYPE=='company') { //if login user is company then only get company user
+                                        $query->where('company_id',Auth::guard('company')->user()->id);
+                                    }
+                                })
+                                ->count();
+        $data['total_rider'] = User::where('user_type','Rider')->count();
+        $data['today_driver_count'] = User::whereDate('created_at', '=', date('Y-m-d'))
+                                        ->where(function($query)  {
+                                            if(LOGIN_USER_TYPE=='company') { //if login user is company then only get company drivers
+                                                $query->where('company_id',Auth::guard('company')->user()->id);
+                                            }
+                                        })
+                                        ->where('user_type','Driver')
+                                        ->count();
+        $data['today_rider_count'] = User::whereDate('created_at', '=', date('Y-m-d'))->where('user_type','Rider')->count();
+
+        if(LOGIN_USER_TYPE=='company') {  //if login user is company then revenue calculated from company trips
+            /*$data['today_revenue'] = floatval( 
+                Trips::whereDate('created_at', '=', date('Y-m-d'))
+                ->where('status','Completed')
+                ->whereHas('driver',function($q1){
+                    $q1->where('company_id',Auth::guard('company')->user()->id);
+                })
+                ->value(DB::raw("SUM(subtotal_fare + driver_peak_amount - driver_or_company_commission)"))
+            );*/
+
+            $data['today_revenue'] = Trips::whereDate('created_at', '=', date('Y-m-d'))
+                ->where('status','Completed')
+                ->whereHas('driver',function($q1){
+                    $q1->where('company_id',Auth::guard('company')->user()->id);
+                })
+                ->get();
+            $data['today_revenue'] = $data['today_revenue']->sum('driver_or_company_earning');
+        }else{
+            /*$data['today_revenue'] = floatval( 
+            Trips::whereDate('created_at', '=', date('Y-m-d'))
+            ->where('status','Completed')
+            ->value(DB::raw("SUM(access_fee + (peak_amount - driver_peak_amount) + schedule_fare + driver_or_company_commission)")));*/
+
+            $data['today_revenue'] =  Trips::whereDate('created_at', '=', date('Y-m-d'))
+            ->where('status','Completed')->get();
+            $data['today_revenue'] = $data['today_revenue']->sum('commission');
+        }
+
+        $data['today_trips'] = Trips::whereDate('created_at', '=', date('Y-m-d'))
+                ->where(function($query)  {
+                    if(LOGIN_USER_TYPE=='company') {    //if login user is company then get only company driver's trip
+                        $query->whereHas('driver',function($q1){
+                            $q1->where('company_id',Auth::guard('company')->user()->id);
+                        });
+                    }
+                })
+                ->count();
+        $data['total_trips'] = Trips::
+                                where(function($query)  {
+                                    if(LOGIN_USER_TYPE=='company') {  //if login user is company then get only company driver's trip
+                                        $query->whereHas('driver',function($q1){
+                                            $q1->where('company_id',Auth::guard('company')->user()->id);
+                                        });
+                                    }
+                                })
+                                ->count();
+        $data['total_success_trips'] = Trips::where('status','Completed')
+        ->where(function($query)  {
+            if(LOGIN_USER_TYPE=='company') {  //if login user is company then get only company driver's trip
+                $query->whereHas('driver',function($q1){
+                    $q1->where('company_id',Auth::guard('company')->user()->id);
+                });
+            }
+        })
+        ->count();
+        if(LOGIN_USER_TYPE=='company') {   //if login user is company then revenue is sum of trip amount
+            /*$data['total_revenue'] = floatval( 
+                Trips::where('status','Completed')
+                ->whereHas('driver',function($q1){
+                    $q1->where('company_id',Auth::guard('company')->user()->id);
+                })
+                ->value(DB::raw("SUM(subtotal_fare + driver_peak_amount - driver_or_company_commission)"))
+            );*/
+            $data['total_revenue'] = Trips::where('status','Completed')
+                ->whereHas('driver',function($q1){
+                    $q1->where('company_id',Auth::guard('company')->user()->id);
+                })->get();
+            $data['total_revenue'] = $data['total_revenue']->sum('driver_or_company_earning');
+        }else{  //if login user is admin then revenue is sum of admin commission
+            /*$data['total_revenue'] = floatval( 
+                Trips::where('status','Completed')->value(DB::raw("SUM(access_fee + (peak_amount - driver_peak_amount) + schedule_fare + driver_or_company_commission)"))
+            );*/
+            $data['total_revenue'] = Trips::where('status','Completed')->get();
+            $data['total_revenue'] = $data['total_revenue']->sum('commission');
+        }
+
+        if(LOGIN_USER_TYPE=='company') {
+            $data['admin_paid_amount'] = Trips::where('status','Completed')
+                ->where('driver_payout','>',0)
+                ->where('payment_mode','<>','Cash')
+                ->whereHas('driver',function($q){
+                    $q->where('company_id',Auth::guard('company')->user()->id);
+                })
+                ->whereHas('driver_payment',function($q1){
+                    $q1->where('admin_payout_status','Paid');
+                })->get();
+
+            $data['admin_paid_amount'] = $data['admin_paid_amount']->sum('driver_payout');
+
+            $data['admin_pending_amount'] = Trips::where('status','Completed')
+                ->where('driver_payout','>',0)
+                ->where('payment_mode','<>','Cash')
+                ->whereHas('driver',function($q){
+                    $q->where('company_id',Auth::guard('company')->user()->id);
+                })
+                ->whereHas('driver_payment',function($q1){
+                    $q1->where('admin_payout_status','Pending');
+                })->get();
+
+            $data['admin_pending_amount'] = $data['admin_pending_amount']->sum('driver_payout');
+        }
+
+        $default_currency = Currency::active()->defaultCurrency()->first();
+        if (LOGIN_USER_TYPE=='company' && session()->get('currency') != null) {  //if login user is company then get session currency
+            $default_currency = Currency::whereCode(session()->get('currency'))->first();
+        }
+        $data['currency_code'] = $default_currency->symbol;
+
+        $data['recent_trips'] = RideRequest::
+            with(['trips','users','car_type','request'])
+            ->where(function($query)  {
+                if(LOGIN_USER_TYPE=='company') { //if login user is company then get only company driver's trip
+                    $query->whereHas('driver',function($q1){
+                        $q1->where('company_id',Auth::guard('company')->user()->id);
+                    });
+                }
+            })
+            ->groupBy('group_id')
+            ->orderBy('group_id','desc')
+            ->limit(10)->get();
+
+
+        $quarter1 = ['01', '02', '03'];
+        $quarter2 = ['04', '05', '06'];
+        $quarter3 = ['07', '08', '09'];
+        $quarter4 = ['10', '11', '12'];
+        $chart = Trips::
+            whereRaw('YEAR(created_at) = ?',[date('Y')])
+            ->where('status', 'Completed')
+            ->where(function($query)  {
+                if(LOGIN_USER_TYPE=='company') {  
+                    $query->whereHas('driver',function($q1){
+                        $q1->where('company_id',Auth::guard('company')->user()->id);
+                    });
+                }
+            });
+        $quarter1_chart=clone($chart);
+        $quarter2_chart=clone($chart);
+        $quarter3_chart=clone($chart);
+        $quarter4_chart=clone($chart);
+
+        //if login user is company then total earning is sum of trip amount .If login user is admin then total revenue is sum of admin commission
+
+        $quarter_amount[1]=floatval($quarter1_chart->wherein(DB::raw('MONTH(created_at)'),$quarter1)->get()->sum(LOGIN_USER_TYPE=='company'?'driver_or_company_earning':'commission'));
+        $quarter_amount[2]=floatval($quarter2_chart->wherein(DB::raw('MONTH(created_at)'),$quarter2)->get()->sum(LOGIN_USER_TYPE=='company'?'driver_or_company_earning':'commission'));
+        $quarter_amount[3]=floatval($quarter3_chart->wherein(DB::raw('MONTH(created_at)'),$quarter3)->get()->sum(LOGIN_USER_TYPE=='company'?'driver_or_company_earning':'commission'));
+        $quarter_amount[4]=floatval($quarter4_chart->wherein(DB::raw('MONTH(created_at)'),$quarter4)->get()->sum(LOGIN_USER_TYPE=='company'?'driver_or_company_earning':'commission'));
+
+        $chart_array = [];
+        $year = date('Y');
+        for($quarter=1;$quarter<=4;$quarter++)
+        {
+            $array['y'] = $year.' Q'.$quarter;
+            $array['amount'] = number_format($quarter_amount[$quarter],2,'.','');
+            $chart_array[] = $array;
+        }
+        $data['line_chart_data'] = json_encode($chart_array);
+         return view('index', $data);
      }
+
+
      public function oldDashboard(){
          return view('admin.index');
      }
+
+     
     public function index()
     {
         $data['users_count'] = User::count();

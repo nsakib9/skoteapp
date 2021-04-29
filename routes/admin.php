@@ -54,6 +54,10 @@ Route::group(['prefix' => (LOGIN_USER_TYPE=='company')?'company':'admin', 'middl
 	Route::match(array('GET', 'POST'), 'edit_footer/{id}', 'FooterController@update')->middleware('admin_can:update_rider');
 	Route::match(array('GET', 'POST'), 'delete_footer/{id}', 'FooterController@delete')->middleware('admin_can:delete_rider');
 
+	// Manage Configuration
+	Route::get('configuration', 'AdminController@configuration');
+
+
 	//Front pages routes end
 
 	// Admin Users and permission routes

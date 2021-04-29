@@ -11,8 +11,12 @@
     <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css')}}">
 
     <title>Login</title>
+
+    {{--  style.css file added in public-assets-css  --}}
+
   </head>
   <body>
+    {{--  images file added in public-assets-image  --}}
   
 
   <div class="d-lg-flex half">
@@ -52,8 +56,6 @@
         </div>
       </div>
     </div>
-
-    
   </div>
     
     
@@ -63,46 +65,47 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" ></script>
     <script src="{{ URL::asset('assets/js/images/main.js')}}"></script>
 
+    <script>
+        $(document).ready(function() {
+            var canDisplayCredentials = '{!! canDisplayCredentials() !!}';
+            $('.login_btn').click(function() {
+                $('.login_btn').removeClass('active')
+                $(this).addClass('active')
+                login_change();
+            });
+            login_change();
+            function login_change() {
+                user = $('.login_btn.active').attr('user')
+                $('.user_type').val(user);
+                if (user == 'Admin') {
+                    if(canDisplayCredentials == '1') {
+                        $('#username').val('admin');
+                    }
+                    $('#username').attr('placeholder','Username');
+                    $('.username_label').text('Username');
+                    $(".username_label").attr('label','Username');
+                }
+                else if(user == 'Dispatcher') {
+                    if(canDisplayCredentials == '1') {
+                        $('#username').val('dispatcher');
+                    }
+                    $('#username').attr('placeholder','Username');
+                    $('.username_label').text('Username');
+                    $(".username_label").attr('label','Username');
+                }
+                else if(user == 'Company') {
+                    if(canDisplayCredentials == '1') {
+                        $('#username').val('9876543211');
+                    }
+                    $('#username').attr('placeholder','Email / Mobile Number');
+                    $('.username_label').text('Email / Mobile Number');
+                    $(".username_label").attr('label','Email / Mobile Number');
+                }
+            }
+        });
+        </script>
 
+    {{--  js file added in public-assets-js  --}}
 
-<script>
-	$(document).ready(function() {
-		var canDisplayCredentials = '{!! canDisplayCredentials() !!}';
-		$('.login_btn').click(function() {
-			$('.login_btn').removeClass('active')
-			$(this).addClass('active')
-			login_change();
-		});
-		login_change();
-		function login_change() {
-			user = $('.login_btn.active').attr('user')
-			$('.user_type').val(user);
-			if (user == 'Admin') {
-				if(canDisplayCredentials == '1') {
-					$('#username').val('admin');
-				}
-				$('#username').attr('placeholder','Username');
-				$('.username_label').text('Username');
-				$(".username_label").attr('label','Username');
-			}
-			else if(user == 'Dispatcher') {
-				if(canDisplayCredentials == '1') {
-					$('#username').val('dispatcher');
-				}
-				$('#username').attr('placeholder','Username');
-				$('.username_label').text('Username');
-				$(".username_label").attr('label','Username');
-			}
-			else if(user == 'Company') {
-				if(canDisplayCredentials == '1') {
-					$('#username').val('9876543211');
-				}
-				$('#username').attr('placeholder','Email / Mobile Number');
-				$('.username_label').text('Email / Mobile Number');
-				$(".username_label").attr('label','Email / Mobile Number');
-			}
-		}
-	});
-	</script>
 </body>
 </html>

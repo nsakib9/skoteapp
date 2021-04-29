@@ -199,8 +199,11 @@
                 </li>
                 @endif
 
+                {{--  <li><a href="{{ url('admin/configuration') }}" key="t-products">  <i class="fas fa-bahai"></i>Configuration</a></li>  --}}
+                <li><a href="{{ url('admin/locations') }}" key="t-products">  <i class="fas fa-bahai"></i>Configuration</a></li>
+
                 {{-- configuration --}}
-                @if($company_user || @$user->can('manage_map') || @$user->can('manage_heat_map'))
+                {{--  @if($company_user || @$user->can('manage_map') || @$user->can('manage_heat_map'))
                 <li class="treeview {{ (Route::current()->uri() == 'admin/wallet/{user_type}' || Route::current()->uri() == 'admin/promo_code') ? 'active' : ''  }}">
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="fas fa-bahai"></i>
@@ -257,7 +260,7 @@
                         </li>
                     </ul>
                 </li>
-                @endif
+                @endif  --}}
 
                 {{-- Site Setting --}}
                 @if($company_user || @$user->can('manage_map') || @$user->can('manage_heat_map'))
