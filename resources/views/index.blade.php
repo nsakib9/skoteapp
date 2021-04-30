@@ -23,7 +23,7 @@
     <div class="row">
         {{--  <div class="col-xl-4">
              <div class="card overflow-hidden">
-                <div class="bg-primary bg-soft">
+                <div class=" bg-soft">
                     <div class="row">
                         <div class="col-7">
                             <div class="text-primary p-3">
@@ -104,7 +104,7 @@
                                     <h4 class="mb-0">{{ html_string($currency_code) }} {{ round($total_revenue) }}</h4>
                                 </div>
 
-                                <div class="mini-stat-icon avatar-sm rounded-circle bg-primary align-self-center">
+                                <div class="mini-stat-icon avatar-sm rounded-circle  align-self-center">
                                     <span class="avatar-title">
                                         <i class="bx bx-copy-alt font-size-24"></i>
                                     </span>
@@ -124,8 +124,8 @@
                                     <h4 class="mb-0">{{ html_string($currency_code) }} {{ round($admin_paid_amount) }}</h4>
                                 </div>
 
-                                <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon">
-                                    <span class="avatar-title rounded-circle bg-primary">
+                                <div class="avatar-sm rounded-circle  align-self-center mini-stat-icon">
+                                    <span class="avatar-title rounded-circle ">
                                         <i class="bx bx-archive-in font-size-24"></i>
                                     </span>
                                 </div>
@@ -145,8 +145,8 @@
                                     <h4 class="mb-0">{{ $total_rider }}</h4>
                                 </div>
 
-                                <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon">
-                                    <span class="avatar-title rounded-circle bg-primary">
+                                <div class="avatar-sm rounded-circle  align-self-center mini-stat-icon">
+                                    <span class="avatar-title rounded-circle ">
                                         <i class="bx bx-purchase-tag-alt font-size-24"></i>
                                     </span>
                                 </div>
@@ -165,8 +165,8 @@
                                     <h4 class="mb-0">{{$total_driver}}</h4>
                                 </div>
 
-                                <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon">
-                                    <span class="avatar-title rounded-circle bg-primary">
+                                <div class="avatar-sm rounded-circle  align-self-center mini-stat-icon">
+                                    <span class="avatar-title rounded-circle ">
                                         <i class="bx bx-purchase-tag-alt font-size-24"></i>
                                     </span>
                                 </div>
@@ -184,8 +184,8 @@
                                     <h4 class="mb-0">{{$total_trips}}</h4>
                                 </div>
 
-                                <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon">
-                                    <span class="avatar-title rounded-circle bg-primary">
+                                <div class="avatar-sm rounded-circle  align-self-center mini-stat-icon">
+                                    <span class="avatar-title rounded-circle ">
                                         <i class="bx bx-purchase-tag-alt font-size-24"></i>
                                     </span>
                                 </div>
@@ -203,8 +203,8 @@
                                     <h4 class="mb-0"> {{ html_string($currency_code) }} {{ round($today_revenue) }}</h4>
                                 </div>
 
-                                <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon">
-                                    <span class="avatar-title rounded-circle bg-primary">
+                                <div class="avatar-sm rounded-circle  align-self-center mini-stat-icon">
+                                    <span class="avatar-title rounded-circle ">
                                         <i class="bx bx-purchase-tag-alt font-size-24"></i>
                                     </span>
                                 </div>
@@ -223,8 +223,8 @@
                                     <h4 class="mb-0">{{ html_string($currency_code) }} {{ round($admin_pending_amount) }}</h4>
                                 </div>
 
-                                <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon">
-                                    <span class="avatar-title rounded-circle bg-primary">
+                                <div class="avatar-sm rounded-circle  align-self-center mini-stat-icon">
+                                    <span class="avatar-title rounded-circle ">
                                         <i class="bx bx-purchase-tag-alt font-size-24"></i>
                                     </span>
                                 </div>
@@ -244,8 +244,8 @@
                                     <h4 class="mb-0">{{ $today_rider_count }}</h4>
                                 </div>
 
-                                <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon">
-                                    <span class="avatar-title rounded-circle bg-primary">
+                                <div class="avatar-sm rounded-circle  align-self-center mini-stat-icon">
+                                    <span class="avatar-title rounded-circle ">
                                         <i class="bx bx-purchase-tag-alt font-size-24"></i>
                                     </span>
                                 </div>
@@ -264,8 +264,8 @@
                                     <h4 class="mb-0">{{$today_driver_count}}</h4>
                                 </div>
 
-                                <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon">
-                                    <span class="avatar-title rounded-circle bg-primary">
+                                <div class="avatar-sm rounded-circle  align-self-center mini-stat-icon">
+                                    <span class="avatar-title rounded-circle ">
                                         <i class="bx bx-purchase-tag-alt font-size-24"></i>
                                     </span>
                                 </div>
@@ -283,8 +283,8 @@
                                     <h4 class="mb-0">{{$today_trips}}</h4>
                                 </div>
 
-                                <div class="avatar-sm rounded-circle bg-primary align-self-center mini-stat-icon">
-                                    <span class="avatar-title rounded-circle bg-primary">
+                                <div class="avatar-sm rounded-circle  align-self-center mini-stat-icon">
+                                    <span class="avatar-title rounded-circle ">
                                         <i class="bx bx-purchase-tag-alt font-size-24"></i>
                                     </span>
                                 </div>
@@ -333,7 +333,7 @@
                     <h4 class="card-title mb-4">Social Source</h4>
                     <div class="text-center">
                         <div class="avatar-sm mx-auto mb-4">
-                            <span class="avatar-title rounded-circle bg-primary bg-soft font-size-24">
+                            <span class="avatar-title rounded-circle  bg-soft font-size-24">
                                 <i class="mdi mdi-facebook text-primary"></i>
                             </span>
                         </div>
@@ -348,7 +348,7 @@
                         <div class="col-4">
                             <div class="social-source text-center mt-3">
                                 <div class="avatar-xs mx-auto mb-3">
-                                    <span class="avatar-title rounded-circle bg-primary font-size-16">
+                                    <span class="avatar-title rounded-circle  font-size-16">
                                         <i class="mdi mdi-facebook text-white"></i>
                                     </span>
                                 </div>
@@ -489,7 +489,7 @@
                                     </td>
                                     <td>
                                         <div class="progress bg-transparent progress-sm">
-                                            <div class="progress-bar bg-primary rounded" role="progressbar"
+                                            <div class="progress-bar  rounded" role="progressbar"
                                                 style="width: 94%" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100">
                                             </div>
                                         </div>

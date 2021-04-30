@@ -20,6 +20,29 @@
     <link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
     <style>
 .overflow-h{overflow: hidden;}
+.card.mini-stats-wid {
+	margin: 10px 0;
+	box-shadow: 0 0 3px #ccc;
+	padding: 10px;
+}
+.card.mini-stats-wid a {
+	width: 50%;
+	background: #6F456E;
+	padding: 3px 5px;
+	color: #fff;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+	transition: 0.3s ease-in-out;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.card.mini-stats-wid a:hover {
+	width: 100%;
+}
+.avatar-title {
+	background-color: #C69727 !important;
+}
         
     </style>
 
