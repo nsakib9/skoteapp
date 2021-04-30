@@ -43,6 +43,41 @@
 .avatar-title {
 	background-color: #C69727 !important;
 }
+
+.conf_menu {}
+    .conf_menu ul.navbar-nav {
+        display: inline;
+    }
+    .conf_menu li {
+        width: max-content;
+        display: inline-flex;
+        align-items: center;
+        background: #fff;
+        margin: 5px;
+        padding: 0 5px;
+        border: 1px solid #DBDBDB;
+    }
+    .conf_menu li:hover,
+    .conf_menu li.dropdown:hover {
+        background: #420653;
+    }
+    .conf_menu li:hover a.nav-link{
+        color: #fff;    
+    }
+    .conf_menu li:hover a.dropdown-toggle {
+	color: #fff;
+}
+    .conf_menu li.dropdown {
+        padding: 0px 10px !important;
+    }
+    .conf_menu li.dropdown a:hover {
+    background: none;
+    color: #fff;
+    }
+    .conf_menu a {
+        padding: 3px 0;
+        color: #000;
+    }
         
     </style>
 
