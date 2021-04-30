@@ -45,6 +45,10 @@
 }
 
 .conf_menu {}
+.conf_menu .navbar-nav > li > a{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
     .conf_menu ul.navbar-nav {
         display: inline;
     }
