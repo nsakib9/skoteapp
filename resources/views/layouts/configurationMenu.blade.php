@@ -15,7 +15,7 @@
         $first_segment = 'admin';
     }
 @endphp
-  <nav class="navbar sticky-top navbar-expand-lg bg-light">
+  <nav class="conf_menu navbar sticky-top navbar-expand-lg bg-light">
     <div class="container">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto w-100 justify-content-center">
