@@ -139,6 +139,33 @@
 <script src="{{asset('front_assets/js/scripts.js')}}"></script>
 
 
+
+
+
+
+{!! Html::script('js/jquery-1.11.3.js') !!}
+  {!! Html::script('js/jquery-ui.js') !!}
+
+  {!! Html::script('js/angular.js') !!}
+  {!! Html::script('js/angular-sanitize.js') !!}
+  <script>
+    var app = angular.module('App', ['ngSanitize']);
+    var APP_URL = {!! json_encode(url('/')) !!};
+    var LOGIN_USER_TYPE = '{!! LOGIN_USER_TYPE !!}';
+    var STRIPE_PUBLISH_KEY = "{{ payment_gateway('publish','Stripe') }}";
+  </script>
+
+  {!! Html::script('js/common.js?v='.$version) !!}
+  {!! Html::script('js/user.js?v='.$version) !!}
+  {!! Html::script('js/main.js?v='.$version) !!}
+  {!! Html::script('js/bootstrap.min.js') !!}
+  {!! Html::script('js/jquery.bxslider.min.js') !!}
+  {!! Html::script('js/jquery.sliderTabs.min.js') !!}
+  {!! Html::script('js/responsiveslides.js?v='.$version) !!}
+
+
+
+
 </body>
 
 </html>

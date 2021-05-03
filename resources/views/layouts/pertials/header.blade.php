@@ -26,7 +26,7 @@
 
 </head>
 
-<body>
+<body ng-app="App"> 
 
 <header class="header sticky-wrapper" id="sticker">
     <div class="container">
