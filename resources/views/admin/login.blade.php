@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css')}}">
 
     <title>Login</title>
-
+    <link rel="shortcut icon" type="image/jpg" href="front_assets/img/favicon.png"/>
     {{--  style.css file added in public-assets-css  --}}
 
   </head>

@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="{{ FAVICON_URL }}">
+  <!-- <link rel="shortcut icon" href="{{ FAVICON_URL }}"> -->
+  <link rel="shortcut icon" type="image/jpg" href="front_assets/img/favicon.png"/>
 
   <meta name="description" content="{{ Helpers::meta((!isset($exception)) ? Route::current()->uri() : '', 'description') }}">
   <meta name="keywords" content="{{ Helpers::meta((!isset($exception)) ? Route::current()->uri() : '', 'keywords') }}">
