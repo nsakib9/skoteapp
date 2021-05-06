@@ -1,15 +1,15 @@
-<link rel="shortcut icon" href="{{ FAVICON_URL }}">
-{{-- @extends('layouts.main')
-@section('main.content') --}}
+{{-- <link rel="shortcut icon" href="{{ FAVICON_URL }}"> --}}
+@extends('layouts.main')
+@section('main.content')
 
-@extends('templatesign')
-@section('main') 
+{{-- @extends('templatesign')
+@section('main')  --}}
 <div id="app-wrapper" class="sigin-riders" ng-controller="user">
    <header class="funnel">
       <div class="bit bit--logo text--center">
-         <a href="{{ url('/') }}">
+         {{-- <a href="{{ url('/') }}">
             <img class="white_logo" src="{{asset('setting/'. $setting->logo_img)}}" style="width: 109px;height:50px;background-size: contain;">
-         </a>
+         </a> --}}
       </div>
    </header>
    <div class="stage-wrapper narrow portable-one-whole forward" id="app-body" data-reactid="10">

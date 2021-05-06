@@ -58,7 +58,7 @@
             </form>
          </div>
          <div class="small push-small--bottom push-small--top" id="sign-up-link-only" data-reactid="26">
-            <p class=" display--inline email_phone-sec" data-reactid="27">{{trans('messages.user.no_account')}}<a href="{{ url('signup_driver')}}">{{trans('messages.home.siginup')}}</a></p>
+            <p class=" display--inline email_phone-sec" data-reactid="27">User have no account?<a href="{{ url('signup_driver')}}">Sign Up</a></p>
             <p class="pull-center forgot password-sec hide">
                <a href="{{ url('forgot_password_driver')}}" class="forgot-password">{{trans('messages.user.forgot_paswrd')}}</a>
             </p>
