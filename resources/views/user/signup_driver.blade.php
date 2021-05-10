@@ -163,8 +163,10 @@
             </div>
                               <div class="layout__item one-whole push-small--bottom" >
               <input type="hidden" name="step" value="basics">
-              <button name="step" value="basics" class="btn--arrow btn--full error-retry-btn _style_3CjDXv" id="submit-btn" ng-click="showPopup('send_otp');" type="button"  style="box-sizing:border-box;text-decoration:none;color:#FFFFFF;display:inline-block;vertical-align:middle;text-align:center;margin:0;cursor:pointer;overflow:visible;background-color:#11939A;font-family:ff-clan-web-pro, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;font-weight:600;font-size:14px;padding:11px 20px;border-radius:0px;border:2px solid #11939A;text-transform:uppercase;outline:none;line-height:18px;position:relative;transition:all 400ms ease;-moz-box-sizing:border-box;-webkit-transition:all 400ms ease;" >SUBMIT
+              <button name="step" value="basics" class="btn-primary btn--arrow btn--full error-retry-btn _style_3CjDXv" id="submit-btn" ng-click="showPopup('send_otp');" type="button"  style="box-sizing:border-box;text-decoration:none;color:#FFFFFF;display:inline-block;vertical-align:middle;text-align:center;margin:0;cursor:pointer;overflow:visible;font-family:ff-clan-web-pro, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;font-weight:600;font-size:14px;padding:11px 20px;border-radius:0px;text-transform:uppercase;outline:none;line-height:18px;position:relative;transition:all 400ms ease;-moz-box-sizing:border-box;-webkit-transition:all 400ms ease;" >SUBMIT
               </button>
+
+
             </div>
 			<div class="layout__item one-whole">
               <p class="legal flush">By proceeding, I agree that Zcon or its representatives may contact me by email, phone, or SMS (including by automated means) at the email address or number I provide, including for marketing purposes.</p>
@@ -178,7 +180,7 @@
                   </div>
               </div>
           </div>
-          <div class="three-section-join ">
+          {{-- <div class="three-section-join ">
               <div class="container">
                   <div class="portable-space clearfix">
                       <div class="top-section-sub clearfix row" style="margin-top:10px;">
@@ -258,7 +260,7 @@
                   </div>
               </div>
           </div>
-      </div>
+      </div> --}}
   </div>
 </section>
 

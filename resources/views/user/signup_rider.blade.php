@@ -126,7 +126,7 @@
   <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
   <input type="hidden" name="code" id="code" />
 
-  <button id="submit-btn" ng-click="showPopup('send_otp');" type="button" class="btn btn--full btn--primary btn--large btn--arrow signup-btn">
+  <button id="submit-btn" ng-click="showPopup('send_otp');" type="button" class="btn btn--full btn--primary btn--large btn--arrow signup-btn" style="background-color:#330C53 !important">
     <span class="float--left push-small--right">Sign Up</span>
     <i class="fa fa-long-arrow-right icon icon_right-arrow-thin"></i>
   </button>
