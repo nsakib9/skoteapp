@@ -82,6 +82,9 @@
         padding: 3px 0;
         color: #000;
     }
+    .navbar {
+        z-index: 9;
+    }
         
     </style>
 
