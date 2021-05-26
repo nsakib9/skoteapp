@@ -18,7 +18,29 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     {{-- file manager styles --}}
     <link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
+li {
+  float: left;
+}
+
+  li a {
+  display: block;
+  color: white;
+  
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+li a:hover {
+  background-color: #cfa233;
+  color: white;
+  text-decoration: none;
+}
+
+
 .overflow-h{overflow: hidden;}
 .card.mini-stats-wid {
 	margin: 10px 0;
@@ -69,8 +91,8 @@
         color: #fff;    
     }
     .conf_menu li:hover a.dropdown-toggle {
-	color: #fff;
-}
+    color: #fff;
+    }
     .conf_menu li.dropdown {
         padding: 0px 10px !important;
     }

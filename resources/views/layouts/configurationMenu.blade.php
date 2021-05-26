@@ -15,36 +15,32 @@
         $first_segment = 'admin';
     }
 @endphp
-  <nav class="conf_menu navbar sticky-top navbar-expand-lg bg-light">
-    <div class="container">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto w-100 justify-content-center">
-          @if(@$user->can('manage_locations'))
-          <li class="nav-item active">
-            <a class="nav-link" href="{{ url('admin/locations') }}">Locations</a>
-          </li>
-          @endif
-          @if(@$user->can('manage_peak_based_fare'))
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url('admin/manage_fare') }}">Fares</a>
-          </li>
-          @endif
-          @if(@$user->can('manage_fees'))
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url('admin/fees') }}">Fees</a>
-          </li>
-          @endif
-          @if($company_user || @$user->can('manage_driver_payments'))
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url($first_segment.'/payout/overall') }}">Payout</a>
-          </li>
-          @endif
-          @if($company_user || @$user->can('manage_wallet'))
-          <li class="nav-item">
+
+<ul style="background-color: #340b53;  list-style-type: none;
+  margin: 0;
+  padding: 0;
+ height:80px;
+   z-index: 9;">
+
+  @if(@$user->can('manage_locations'))
+  <li>  <a class="nav-link" href="{{ url('admin/locations') }}">Locations</a></li>
+     @endif
+     @if(@$user->can('manage_peak_based_fare'))
+  <li><a class="nav-link" href="{{ url('admin/manage_fare') }}">Fares</a></li>
+   @endif
+    @if(@$user->can('manage_fees'))
+  <li> <a class="nav-link" href="{{ url('admin/fees') }}">Fees</a></li>
+   @endif
+  @if($company_user || @$user->can('manage_driver_payments'))
+          
+<li>  <a class="nav-link" href="{{ url($first_segment.'/payout/overall') }}">Overall</a></li>
+   @endif
+ @if($company_user || @$user->can('manage_wallet'))
+          <li>
             <a class="nav-link" href="{{ route('wallet',['user_type' => 'Rider']) }}">Wallet</a>
           </li>
           @endif
-          @if(@$user->can('view_manage_reason'))
+           @if(@$user->can('view_manage_reason'))
           <li class="nav-item">
             <a class="nav-link" href="{{ url('admin/cancel-reason') }}">Cancellations</a>
           </li>
@@ -83,19 +79,19 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ url('admin/currency') }}">Currency</a>
           </li>
-          @endif
-          <li class="nav-item">
+          @endif   
+           <li class="nav-item">
             <a class="nav-link" href="#">Website</a>
           </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documents(new) <b class="caret"></b></a>
-            <ul class="dropdown-menu ">
-              <li><a href="{{ url($first_segment.'/files') }}">File Manager</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+         
+        <div class="w3-dropdown-hover" style="background-color: #340b53 ;">
+    <button class="w3-button" style="color: white;" ><li>Documents(new)</li></button>
+    <div class="w3-dropdown-content" style="min-width: 157.1px; text-align: center;" >
+     <a style="color: black;"  href="{{ url($first_segment.'/files') }}">File Manager</a> 
     </div>
-  </nav>
+  </div>
+</ul>
+
+
 {{--  </div>  --}}
 {{--  @stop  --}}
