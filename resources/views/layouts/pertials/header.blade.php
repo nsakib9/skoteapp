@@ -35,11 +35,12 @@
             <a href="/" class="logo">
                 <img src="{{asset('setting/'. $setting->logo_img)}}" alt="logo">
             </a>
-            <a href="#" class="nav-toggler">
+            {{--   <a href="#" class="nav-toggler">
                 <span></span>
                 <span></span>
                 <span></span>
-            </a>
+            </a>--}}
+            
             <div class="navigation-content">
                 <ul class="navigation">
                     @foreach($menus->where('type', 'header') as $menu)
@@ -47,57 +48,19 @@
                     @endforeach
                 </ul>
                 <a href="#" class="btn btn-primary">{{$setting->button_text}}</a>
-                <div class="side-menu">
+                {{--  <div class="side-menu">
                     <i class="fas fa-bars"></i>
-                </div>
+                </div> --}}
 
 
 <!-- resource/views/laouts/pertials/header.blade.php -->
-{{-- <div id="sidenav" class="sidenav d-none">
-    <div class="sideber-menu-item">
-        <div class="siderber-logo mb-50">
-        <img src="{{asset('front_assets/img/logo.png')}}">
-        </div>
-        <div  class="closebtn" >&times;</div>
-    
-        <a href="/about">About</a>
-    	<a href="/pricing">Pricing</a>
-   		<a href="/admin/login">Login</a>
-    	<a href="/admin/login">Register</a>
-    	<a href="/contact">Contact Us</a>
-    </div>
-    <div class="flex mt-30 sideber-socalicon">
-        <ul class="list-unstyled social">
-            <li>
-                <a href="#">
-                    <i class="fa fa-facebook"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-instagram"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-twitter"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-youtube-play"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-pinterest"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>   --}}
 
-<div id="sidenav" class="sidenav d-none">
+            </div>
+            <div class="side-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+    <div id="sidenav" class="sidenav d-none">
     <div class="sideber-menu-item">
         <a href="/" class="siderber-logo mb-50">
             <img src="{{asset('front_assets/img/logo.png')}}">
@@ -109,8 +72,6 @@
          @endforeach
         </div>
     </div>
-
-
     <div class="flex mt-30 sideber-socalicon">
         <ul class="list-unstyled social">
             <li>
@@ -141,11 +102,9 @@
         </ul>
     </div>
 </div>
-            
-            
-            
 
-            </div>
+
+
         </nav>
     </div>
 </header>
